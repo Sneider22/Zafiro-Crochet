@@ -224,6 +224,8 @@ header {
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 3rem;
+  position: relative;
+  /* Para el dropdown de sugerencias */
 }
 
 .category-list {
@@ -265,6 +267,55 @@ header {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
+}
+
+/* === SEARCH SUGGESTIONS === */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid var(--accent);
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.search-suggestions.active {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: var(--secondary);
+}
+
+.suggestion-item strong {
+  color: var(--primary-dark);
+}
+
+.suggestion-price {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 /* === PRODUCT GRID === */
@@ -356,6 +407,52 @@ header {
   font-size: 1rem;
 }
 
+/* === PAGINATION === */
+#pagination {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pagination-btn {
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--accent);
+  background: white;
+  color: var(--text-main);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.pagination-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 /* === MODALS === */
 .modal {
   position: fixed;
@@ -420,8 +517,10 @@ header {
 /* === INFO BAR === */
 .info-bar {
   background: white;
-  padding: 3rem 0;
-  margin-top: 4rem;
+  padding: 1.5rem 0;
+  /* Reducido de 3rem */
+  margin-top: 2rem;
+  /* Reducido de 4rem */
   border-top: 1px solid var(--accent);
   border-bottom: 1px solid var(--accent);
 }
@@ -429,14 +528,17 @@ header {
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
+  /* Reducido de 2rem */
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.8rem;
+  /* Reducido de 1rem */
+  padding: 0.5rem;
+  /* Reducido de 1rem */
   border-radius: 12px;
   transition: var(--transition);
 }
@@ -447,18 +549,21 @@ header {
 }
 
 .info-item i {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  /* Reducido de 2rem */
   color: var(--primary);
 }
 
 .info-item h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  /* Reducido de 1.1rem */
   color: var(--text-main);
   margin-bottom: 0.2rem;
 }
 
 .info-item p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  /* Reducido de 0.9rem */
   color: #666;
 }
 

@@ -67,18 +67,21 @@
       <!-- Controles de Filtro -->
       <div class="controls">
         <input type="text" id="search" class="search-input" placeholder="Buscar...">
+        <div id="search-suggestions" class="search-suggestions"></div>
         <div id="category-filters" class="category-list">
           <button class="filter-btn active" data-category="all">Todos</button>
-          <!-- Filtros dinámicos -->
-          <button class="filter-btn" data-category="peluches">Amigurumis</button>
-          <button class="filter-btn" data-category="fantasia">Fantasía</button>
-          <button class="filter-btn" data-category="ropa">Ropa/Accesorios</button>
+          <button class="filter-btn" data-category="ramos">Ramos 💐</button>
+          <button class="filter-btn" data-category="snoopy">Snoopy 🐶</button>
+          <button class="filter-btn" data-category="superheroes">Superhéroes 🦸</button>
         </div>
       </div>
 
       <div id="product-grid" class="grid">
         <!-- JS inyectará productos aquí -->
       </div>
+
+      <!-- Controles de Paginación -->
+      <div id="pagination"></div>
     </section>
   </main>
 
@@ -277,9 +280,9 @@
           <label>Categoría</label>
           <select id="newProdCategory"
             style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
-            <option value="peluches">Amigurumis</option>
-            <option value="fantasia">Fantasía</option>
-            <option value="ropa">Ropa/Accesorios</option>
+            <option value="ramos">Ramos 💐</option>
+            <option value="snoopy">Snoopy 🐶</option>
+            <option value="superheroes">Superhéroes 🦸</option>
           </select>
         </div>
         <div class="form-group full">
