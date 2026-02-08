@@ -22,8 +22,7 @@
     <div class="container nav-container">
       <div class="brand">
         <div class="logo-placeholder">
-          <!-- Aquí pones tu logo: <img src="logo.jpg" alt="Logo"> -->
-          <i class="fa-solid fa-gem"></i>
+          <img src="logo.jpg" alt="logo">
         </div>
         <h1 class="logo-text">Zafiro Crochet</h1>
       </div>
@@ -44,7 +43,7 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h2>Tejido con amor, hilo a hilo</h2>
+        <h2>Tejido con amor</h2>
         <p>Encuentra creaciones únicas en crochet, hechas a mano y con el corazón.</p>
         <a href="#catalogo" class="btn btn-primary">Ver Catálogo <i class="fa-solid fa-arrow-down"></i></a>
       </div>
@@ -176,7 +175,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Zafiro Crochet. Calidad Artesanal.</p>
+    <p>&copy; 2026 Zafiro Crochet</p>
   </footer>
 
   <!-- MODAL DETALLE PRODUCTO -->
@@ -185,7 +184,18 @@
       <button onclick="closeProductModal()" class="close-modal-abs">&times;</button>
       <div class="detail-grid">
         <div class="detail-image-container">
-          <img id="detailImage" src="" alt="Detalle">
+          <!-- Galería de Imágenes -->
+          <div class="image-gallery">
+            <button class="gallery-nav prev" onclick="changeProductImage(-1)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img id="detailImage" src="" alt="Detalle">
+            <button class="gallery-nav next" onclick="changeProductImage(1)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- Indicadores de imagen -->
+          <div id="imageIndicators" class="image-indicators"></div>
         </div>
         <div class="detail-info">
           <span id="detailCategory" class="card-category">Categoría</span>

@@ -9,7 +9,8 @@
  *   price: precio actual,
  *   oldPrice: precio anterior (opcional, si se pone, sale en OFERTAS),
  *   category: "categoría" (ramos, snoopy, superheroes),
- *   image: "URL de la imagen",
+ *   image: "URL principal" (para compatibilidad),
+ *   images: ["URL1", "URL2", "URL3"] (array de imágenes para galería),
  *   description: "Descripción breve",
  *   rating: número de estrellas (1-5)
  * }
@@ -19,11 +20,15 @@ const products = [
     // === RAMOS ===
     {
         id: 1,
-        name: "Ramo de Rosas Rojas",
+        name: "Snoopy Bouquet 🌹🌻",
         price: 25.00,
         category: "ramos",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400",
-        description: "Hermoso ramo de rosas tejidas a mano en color rojo intenso. Perfecto para regalar.",
+        image: "fotos productos/ramo snoopy 1.jpg",
+        images: [
+            "fotos productos/ramo snoopy 1.jpg",
+            "fotos productos/ramo snoopy 2.jpeg",
+        ],
+        description: "Este ramo contiene 3 girasoles, 3 rosas y un Snoopy aviador 🤍",
         rating: 5
     },
     {
@@ -70,8 +75,13 @@ const products = [
         name: "Snoopy Clásico",
         price: 18.00,
         category: "snoopy",
-        image: "https://images.unsplash.com/photo-1587402092301-725e37c70fd8?w=400",
-        description: "El famoso beagle blanco con su collar rojo. Tamaño mediano.",
+        image: "fotos productos/snoopygordo.jpeg",
+        images: [
+            "fotos productos/snoopygordo.jpeg",
+            "fotos productos/snoopygordo2.jpeg",
+            "fotos productos/snoopygordo3.jpeg",
+        ],
+        description: "Snoopy. Medida: 11cm aprox. Material: 100% Algodón",
         rating: 5
     },
     {

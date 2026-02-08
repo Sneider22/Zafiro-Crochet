@@ -186,6 +186,8 @@ function createProductCard(product, isOfferSelect = false) {
 
 /* === LÓGICA DEL DETALLE (MODAL) === */
 let currentDetailId = null;
+let currentImageIndex = 0;
+let currentProductImages = [];
 
 function openProductModal(id) {
   const product = state.products.find(p => p.id === id);
@@ -271,18 +273,66 @@ function openProductModal(id) {
   if (!product) return;
 
   currentDetailId = id;
+  currentImageIndex = 0;
+
+  // Obtener imágenes (usar array si existe, sino crear array con imagen única)
+  currentProductImages = product.images || [product.image];
 
   // Llenar datos modal
-  document.getElementById('detailImage').src = product.image;
+  updateProductImage();
   document.getElementById('detailCategory').innerText = product.category;
   document.getElementById('detailName').innerText = product.name;
   document.getElementById('detailDesc').innerText = product.description || "Sin descripción disponible.";
   document.getElementById('detailPrice').innerText = `$${product.price.toFixed(2)}`;
   document.getElementById('qtyInput').value = 1;
 
+  // Renderizar indicadores
+  renderImageIndicators();
+
   document.getElementById('productModal').classList.add('active');
   // Agregar estado al historial
   history.pushState({ modal: 'product' }, '');
+}
+
+function updateProductImage() {
+  const imgElement = document.getElementById('detailImage');
+  imgElement.src = currentProductImages[currentImageIndex];
+
+  // Actualizar indicadores activos
+  const indicators = document.querySelectorAll('.indicator-dot');
+  indicators.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentImageIndex);
+  });
+}
+
+function renderImageIndicators() {
+  const container = document.getElementById('imageIndicators');
+  if (currentProductImages.length <= 1) {
+    container.innerHTML = '';
+    return;
+  }
+
+  container.innerHTML = currentProductImages.map((_, index) =>
+    `<div class="indicator-dot ${index === 0 ? 'active' : ''}" onclick="goToImage(${index})"></div>`
+  ).join('');
+}
+
+function changeProductImage(direction) {
+  currentImageIndex += direction;
+
+  // Loop circular
+  if (currentImageIndex < 0) {
+    currentImageIndex = currentProductImages.length - 1;
+  } else if (currentImageIndex >= currentProductImages.length) {
+    currentImageIndex = 0;
+  }
+
+  updateProductImage();
+}
+
+function goToImage(index) {
+  currentImageIndex = index;
+  updateProductImage();
 }
 
 function closeProductModal() {
