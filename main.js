@@ -288,6 +288,20 @@ function closeLogin() {
   document.getElementById('loginModal').classList.remove('active');
 }
 
+function sendSuggestion() {
+  const input = document.getElementById('suggestionInput').value;
+  if (!input.trim()) return alert("Por favor escribe algo :)");
+
+  const phoneNumber = "584142826330";
+  const message = `Hola! 👋 Tengo una sugerencia para un nuevo producto:\n\n✨ *${input}*\n\n¿Qué te parece?`;
+
+  const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+
+  // Limpiar el input después de enviar
+  document.getElementById('suggestionInput').value = '';
+}
+
 function closeAdminPanel() {
   document.getElementById('adminPanelModal').classList.remove('active');
 }

@@ -1,28 +1,24 @@
 /* === VARIABLES & CONFIGURACIÓN === */
 :root {
-  /* Nueva Paleta: Zafiro Crochet */
-  --primary: #4361ee;
-  /* Azul Rey Brillante */
-  --primary-dark: #3a0ca3;
-  /* Azul Profundo/Zafiro */
-  --secondary: #eefbff;
-  /* Celeste Muy Claro (Fondo) */
-  --accent: #cae9ff;
-  /* Celeste Acento */
-  --text-main: #0b1c48;
-  /* Azul Marino Oscuro (Texto) */
-  --text-light: #480ca8;
+  --primary: #ff8fa3;
+  /* Rosa Premium */
+  --primary-dark: #ff4d6d;
+  /* Rosa Oscuro */
+  --secondary: #fff0f3;
+  /* Rosa Muy Claro (Fondo) */
+  --accent: #ffccd5;
+  /* Acento Suave */
+  --text-main: #590d22;
+  /* Texto Oscuro (Vino profundo) */
+  --text-light: #800f2f;
   --white: #ffffff;
-  --glass: rgba(255, 255, 255, 0.85);
-  /* Menos transparencia para mejor lectura */
-  --glass-border: rgba(67, 97, 238, 0.2);
-  --shadow: 0 8px 32px 0 rgba(67, 97, 238, 0.1);
-  --gold: #f72585;
-  /* Toque rosa/fucsia para contraste en ofertas (opcional) */
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  --gold: #ffb703;
 
   --radius: 12px;
-  /* Bordes un poco menos redondos para que se vea menos "globo" */
-  --transition: all 0.3s ease;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 * {
@@ -34,12 +30,11 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--secondary);
-  /* Degradado sutil azulado */
   background-image:
-    radial-gradient(at 0% 0%, hsla(220, 100%, 86%, 0.4) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(200, 100%, 93%, 1) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(340, 100%, 76%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(355, 100%, 93%, 1) 0px, transparent 50%);
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: 1.6;
   min-height: 100vh;
 }
 
@@ -798,31 +793,67 @@ footer {
   }
 
   .detail-image-container {
-    min-height: 300px;
-  }
-
-  .card-content {
+    min-height: 200px;
     padding: 1rem;
   }
 
-  .card-title {
-    font-size: 1rem;
+  .detail-image-container img {
+    max-height: 250px;
   }
 
-  .btn {
-    padding: 0.6rem 1.2rem;
+  .detail-info {
+    padding: 1.5rem;
+  }
+
+  .card-content {
+    padding: 0.8rem;
+  }
+
+  .card-title {
     font-size: 0.9rem;
   }
 
-  .logo-text {
-    font-size: 1.2rem;
+  .price {
+    font-size: 1rem;
   }
 
-  .hero h2 {
-    font-size: 2rem;
+  /* Optimización Tarjetas Móvil */
+  .card-image-container {
+    height: 160px;
+    /* Altura compacta */
   }
 
-  .form-grid {
-    grid-template-columns: 1fr;
+  .card-actions .btn {
+    padding: 0.4rem;
+    font-size: 0.8rem;
   }
+
+  .suggestion-box {
+    flex-direction: column;
+  }
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.form-grid {
+  grid-template-columns: 1fr;
 }
