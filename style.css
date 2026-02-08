@@ -648,6 +648,37 @@ header {
   border-radius: 8px;
 }
 
+/* === SUGGESTION SECTION === */
+.suggestion-section {
+  margin: 4rem auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--accent);
+}
+
+.suggestion-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.suggestion-box input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.suggestion-box input:focus {
+  border-color: var(--primary);
+}
+
 /* === FOOTER === */
 footer {
   text-align: center;
