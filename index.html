@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zafiro Crochet | Arte hecho a mano</title>
+  <!-- Google Fonts Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header Flotante -->
+  <header>
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="logo-placeholder">
+          <!-- Aquí pones tu logo: <img src="logo.jpg" alt="Logo"> -->
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <h1 class="logo-text">Zafiro Crochet</h1>
+      </div>
+
+      <div class="nav-actions">
+        <button id="adminBtn" class="btn btn-icon" title="Acceso Admin">
+          <i class="fa-solid fa-user-lock"></i>
+        </button>
+        <div class="cart-btn" onclick="openCart()">
+          <i class="fa-solid fa-bag-shopping" style="color: var(--primary-dark); font-size: 1.2rem;"></i>
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Tejido con amor, hilo a hilo</h2>
+        <p>Encuentra creaciones únicas en crochet, hechas a mano y con el corazón.</p>
+        <a href="#catalogo" class="btn btn-primary">Ver Catálogo <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+    </section>
+
+    <!-- Sección de Ofertas (Dinámica) -->
+    <div id="offers-container" class="hidden">
+      <h3 class="section-title">Ofertas Especiales</h3>
+      <div class="container">
+        <div id="offers-grid" class="grid">
+          <!-- JS inyectará ofertas aquí -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Catálogo Principal -->
+    <section id="catalogo" class="container">
+      <h3 class="section-title">Nuestras Creaciones</h3>
+
+      <!-- Controles de Filtro -->
+      <div class="controls">
+        <input type="text" id="search" class="search-input" placeholder="Buscar...">
+        <div id="category-filters" class="category-list">
+          <button class="filter-btn active" data-category="all">Todos</button>
+          <!-- Filtros dinámicos -->
+          <button class="filter-btn" data-category="peluches">Amigurumis</button>
+          <button class="filter-btn" data-category="fantasia">Fantasía</button>
+          <button class="filter-btn" data-category="ropa">Ropa/Accesorios</button>
+        </div>
+      </div>
+
+      <div id="product-grid" class="grid">
+        <!-- JS inyectará productos aquí -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Sección de Información (Info Bar) -->
+  <section class="info-bar">
+    <div class="container info-grid">
+      <div class="info-item">
+        <i class="fa-solid fa-shapes"></i>
+        <div>
+          <h4>Amigurumis</h4>
+          <p>Diseños únicos</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Caracas, Venezuela</h4>
+          <p>Hecho en casa</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+          <h4>Envíos Nacionales</h4>
+          <p>A todo el país</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-store"></i>
+        <div>
+          <h4>Tienda Online</h4>
+          <p>24/7 Disponible</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section container">
+    <h3 class="section-title">Preguntas Frecuentes</h3>
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo demoran en hacer un pedido?</summary>
+        <div class="faq-content">
+          <p>Dependiendo de la complejidad, generalmente tomamos de 3 a 5 días hábiles para confeccionar tu pedido con
+            el mayor cuidado.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen diseños personalizados?</summary>
+        <div class="faq-content">
+          <p>¡Sí! Nos encanta crear personajes a pedido. Escríbenos al WhatsApp con una foto o idea y te damos
+            presupuesto.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo realizo el pago?</summary>
+        <div class="faq-content">
+          <p>Aceptamos Pago Móvil, transferencias bancarias y efectivo (solo en Caracas). Los detalles te los damos al
+            confirmar el pedido por WhatsApp.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen entregas personales?</summary>
+        <div class="faq-content">
+          <p>Sí, realizamos entregas personales en zonas céntricas de Caracas previo acuerdo.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué materiales utilizan?</summary>
+        <div class="faq-content">
+          <p>Usamos hilo de algodón mercerizado de alta calidad, hipoalergénico y relleno siliconado suave. Ojos de
+            seguridad para mayor protección.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Zafiro Crochet. Calidad Artesanal.</p>
+  </footer>
+
+  <!-- MODAL DETALLE PRODUCTO -->
+  <div id="productModal" class="modal">
+    <div class="modal-content product-detail-content">
+      <button onclick="closeProductModal()" class="close-modal-abs">&times;</button>
+      <div class="detail-grid">
+        <div class="detail-image-container">
+          <img id="detailImage" src="" alt="Detalle">
+        </div>
+        <div class="detail-info">
+          <span id="detailCategory" class="card-category">Categoría</span>
+          <h2 id="detailName">Nombre del Producto</h2>
+          <p id="detailDesc" class="detail-desc">Descripción detallada del producto...</p>
+
+          <div class="detail-price-row">
+            <span id="detailPrice" class="price big-price">$0.00</span>
+          </div>
+
+          <div class="quantity-selector">
+            <button onclick="changeQty(-1)">-</button>
+            <input type="number" id="qtyInput" value="1" min="1" readonly>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+
+          <button onclick="addToCartFromModal()" class="btn btn-primary full-width">
+            Agregar al Carrito <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CARRITO -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tu Carrito</h2>
+        <button onclick="closeCart()" class="close-modal">&times;</button>
+      </div>
+
+      <div id="cartItems" class="cart-items-container">
+        <!-- Items del carrito -->
+      </div>
+
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+
+      <button onclick="checkoutWhatsApp()" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Enviar Pedido
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL LOGIN -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content login-modal">
+      <h2>Administración</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" id="usernameInput" placeholder="Usuario">
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" id="passwordInput" placeholder="Contraseña">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary full-width">Entrar</button>
+          <button type="button" onclick="closeLogin()" class="btn btn-outline full-width">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL GENERADOR DE PRODUCTOS (ADMIN PANEL) -->
+  <div id="adminPanelModal" class="modal">
+    <div class="modal-content admin-content">
+      <div class="modal-header">
+        <h2>Agregar Nuevo Producto</h2>
+        <button onclick="closeAdminPanel()" class="close-modal">&times;</button>
+      </div>
+      <p class="instruction">Llena los datos y copia el código generado en tu archivo <b>products.js</b>.</p>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" id="newProdName">
+        </div>
+        <div class="form-group">
+          <label>Precio ($)</label>
+          <input type="number" id="newProdPrice" step="0.01">
+        </div>
+        <div class="form-group">
+          <label>Precio Anterior (Opcional - Oferta)</label>
+          <input type="number" id="newProdOldPrice" step="0.01">
+        </div>
+        <div class="form-group">
+          <label>Categoría</label>
+          <select id="newProdCategory"
+            style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;">
+            <option value="peluches">Amigurumis</option>
+            <option value="fantasia">Fantasía</option>
+            <option value="ropa">Ropa/Accesorios</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>URL Imagen</label>
+          <input type="text" id="newProdImage" placeholder="https://...">
+        </div>
+        <div class="form-group full">
+          <label>Descripción</label>
+          <textarea id="newProdDesc" rows="2"></textarea>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="btn btn-primary full-width">Generar Código</button>
+
+      <div class="code-area">
+        <label>Código Generado (Copiar y pegar en products.js):</label>
+        <textarea id="generatedCode" rows="6" readonly onclick="this.select()"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
