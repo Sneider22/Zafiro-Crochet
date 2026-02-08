@@ -1,24 +1,28 @@
 /* === VARIABLES & CONFIGURACIÓN === */
 :root {
-  --primary: #ff8fa3;
-  /* Rosa Premium */
-  --primary-dark: #ff4d6d;
-  /* Rosa Oscuro */
-  --secondary: #fff0f3;
-  /* Rosa Muy Claro (Fondo) */
-  --accent: #ffccd5;
-  /* Acento Suave */
-  --text-main: #590d22;
-  /* Texto Oscuro (Vino profundo) */
-  --text-light: #800f2f;
+  /* Nueva Paleta: Zafiro Crochet */
+  --primary: #4361ee;
+  /* Azul Rey Brillante */
+  --primary-dark: #3a0ca3;
+  /* Azul Profundo/Zafiro */
+  --secondary: #eefbff;
+  /* Celeste Muy Claro (Fondo) */
+  --accent: #cae9ff;
+  /* Celeste Acento */
+  --text-main: #0b1c48;
+  /* Azul Marino Oscuro (Texto) */
+  --text-light: #480ca8;
   --white: #ffffff;
-  --glass: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.5);
-  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  --gold: #ffb703;
+  --glass: rgba(255, 255, 255, 0.85);
+  /* Menos transparencia para mejor lectura */
+  --glass-border: rgba(67, 97, 238, 0.2);
+  --shadow: 0 8px 32px 0 rgba(67, 97, 238, 0.1);
+  --gold: #f72585;
+  /* Toque rosa/fucsia para contraste en ofertas (opcional) */
 
-  --radius: 16px;
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --radius: 12px;
+  /* Bordes un poco menos redondos para que se vea menos "globo" */
+  --transition: all 0.3s ease;
 }
 
 * {
@@ -29,13 +33,13 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  /* Fuente Moderna */
   background-color: var(--secondary);
+  /* Degradado sutil azulado */
   background-image:
-    radial-gradient(at 0% 0%, hsla(340, 100%, 76%, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(355, 100%, 93%, 1) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(220, 100%, 86%, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(200, 100%, 93%, 1) 0px, transparent 50%);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5;
   min-height: 100vh;
 }
 
@@ -177,7 +181,8 @@ header {
 /* === HERO SECTION === */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2.5rem 1rem;
+  /* Padding reducido */
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
 }
 

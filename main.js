@@ -71,9 +71,14 @@ function createProductCard(product, isOfferSelect = false) {
                 <div class="card-category">${product.category}</div>
                 <h3 class="card-title">${product.name}</h3>
                 ${priceDisplay}
-                <button class="btn btn-outline" style="width: 100%; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
-                    Ver Detalle <i class="fa-solid fa-eye"></i>
-                </button>
+                <div class="card-actions">
+                    <button class="btn btn-outline" style="flex: 1; justify-content: center; padding: 0.5rem;" title="Ver Detalle">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button onclick="event.stopPropagation(); addToCart(${product.id})" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.5rem;" title="Agregar al Carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
             </div>
         </article>
     `;
