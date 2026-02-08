@@ -33,11 +33,15 @@ const products = [
     },
     {
         id: 2,
-        name: "Ramo de Tulipanes Pastel",
+        name: "Ramo de Flores Amarillas",
         price: 22.00,
         category: "ramos",
-        image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400",
-        description: "Delicado ramo de tulipanes en tonos pastel. Ideal para decoración.",
+        image: "fotos productos/ramo girasol.jpeg",
+        images: [
+            "fotos productos/ramo girasol.jpeg",
+            "fotos productos/ramo girasol2.jpeg",
+        ],
+        description: "Uno de nuestros ramos favoritos de flores amarillas 🌻💛",
         rating: 5
     },
     {
@@ -195,5 +199,38 @@ const products = [
         image: "https://images.unsplash.com/photo-1620147461831-a97b99ade1d3?w=400",
         description: "La espía más famosa del universo Marvel.",
         rating: 5
-    }
+    },
+
+    // === LLAVEROS ===
+    {
+        id: 19,
+        name: "Llaveros de abejitas",
+        price: 25.00,
+        category: "llaveros",
+        image: "fotos productos/llavero abeja.jpeg",
+        images: [
+            "fotos productos/llavero abeja.jpeg",
+            "fotos productos/llavero abeja2.jpeg",
+        ],
+        description: "Llaveros de abejitas con imanes. Material: 100% acrílico hipoalergénico",
+        rating: 5
+    },
+    {
+        id: 20,
+        name: "Batman Chibi",
+        price: 24.00,
+        category: "llaveros",
+        image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400",
+        description: "El caballero oscuro en versión adorable y compacta.",
+        rating: 5
+    },
+    {
+        id: 21,
+        name: "Wonder Woman",
+        price: 26.00,
+        category: "llaveros",
+        image: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=400",
+        description: "La princesa amazona con su lazo de la verdad incluido.",
+        rating: 5
+    },
 ];
