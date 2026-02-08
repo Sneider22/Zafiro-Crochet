@@ -22,11 +22,8 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 // Mapeo de categorías a emojis
 const categoryEmojis = {
   'ramos': '💐',
-  'llaveros': '🔑',
-  'peluches': '🧸',
-  'personajes': '⭐',
   'snoopy': '🐶',
-  'personalizados': '🎨'
+  'superheroes': '🦸'
 };
 
 /* === INICIALIZACIÓN === */

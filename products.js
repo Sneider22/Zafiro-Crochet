@@ -9,8 +9,7 @@
  *   price: precio actual,
  *   oldPrice: precio anterior (opcional, si se pone, sale en OFERTAS),
  *   category: "categoría" (ramos, snoopy, superheroes),
- *   image: "URL principal" (para compatibilidad),
- *   images: ["URL1", "URL2", "URL3"] (array de imágenes para galería),
+ *   image: "URL de la imagen",
  *   description: "Descripción breve",
  *   rating: número de estrellas (1-5)
  * }
@@ -21,7 +20,8 @@ const products = [
     {
         id: 1,
         name: "Snoopy Bouquet 🌹🌻",
-        price: 25.00,
+        price: 40.00,
+        oldPrice: 55.00,
         category: "ramos",
         image: "fotos productos/ramo snoopy 1.jpg",
         images: [

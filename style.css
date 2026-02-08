@@ -176,8 +176,8 @@ header {
 /* === HERO SECTION === */
 .hero {
   text-align: center;
-  padding: 2.5rem 1rem;
-  /* Padding reducido */
+  padding: 1.5rem 1rem;
+  /* Reducido de 2.5rem */
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
@@ -569,8 +569,7 @@ header {
 
 /* === FAQ SECTION === */
 .faq-section {
-  margin-top: 2rem;
-  /* Reducido de 4rem */
+  margin-top: 4rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -686,9 +685,9 @@ header {
 }
 
 .image-gallery img {
-  max-width: 100%;
-  max-height: 500px;
-  object-fit: contain;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .gallery-nav {
@@ -859,13 +858,16 @@ header {
 .suggestion-box .btn {
   padding: 0.6rem 1.5rem;
   font-size: 0.95rem;
+  width: auto;
 }
 
 /* === FOOTER === */
 footer {
   text-align: center;
-  padding: 3rem 1rem;
-  margin-top: 4rem;
+  padding: 1rem 0;
+  /* Reducido de 3rem 1rem */
+  margin-top: 2rem;
+  /* Reducido de 4rem */
   background: var(--white);
   color: var(--text-light);
 }
@@ -1007,7 +1009,6 @@ footer {
   /* Optimización Tarjetas Móvil */
   .card-image-container {
     height: 160px;
-    /* Altura compacta */
   }
 
   .card-actions .btn {
