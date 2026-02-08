@@ -382,10 +382,31 @@ header {
   letter-spacing: 1px;
 }
 
+.car.detail-info h2 {
+  font-size: 1.8rem;
+  /* Reducido de 2.2rem */
+  margin-bottom: 0.8rem;
+  /* Reducido de 1rem */
+  color: var(--text-main);
+}
+
 .card-title {
   font-size: 1.2rem;
   margin: 0.5rem 0;
   color: var(--text-main);
+}
+
+.card-price-con.detail-price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  /* Reducido */
+}
+
+.detail-info .card-category {
+  margin-bottom: 0.5rem;
+  /* Reducido de 1rem */
 }
 
 .card-price-container {
@@ -688,6 +709,8 @@ header {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  border-radius: 12px;
+  /* Bordes redondeados sutiles */
 }
 
 .gallery-nav {
@@ -753,21 +776,26 @@ header {
 }
 
 .detail-info {
-  padding: 3rem;
+  padding: 2rem;
+  /* Reducido de 3rem */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .detail-desc {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+  /* Reducido de 1.5rem */
   color: #555;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  /* Reducido de 1.1rem */
 }
 
 .big-price {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  /* Reducido de 2.5rem */
+  margin-bottom: 1rem;
+  /* Reducido de 2rem */
   display: block;
 }
 
@@ -775,7 +803,8 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  /* Reducido de 2rem */
 }
 
 .quantity-selector button {
@@ -1018,6 +1047,39 @@ footer {
 
   .suggestion-box {
     flex-direction: column;
+  }
+
+  /* Optimización Modal Detalle en Móvil */
+  .detail-info {
+    padding: 1.5rem !important;
+  }
+
+  .detail-info h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .detail-desc {
+    font-size: 0.9rem !important;
+    margin: 0.8rem 0 !important;
+  }
+
+  .big-price {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .quantity-selector {
+    margin-bottom: 0.8rem !important;
+  }
+
+  .image-gallery img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
   }
 }
 
