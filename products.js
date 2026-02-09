@@ -1,14 +1,13 @@
 /**
- * Archivo de Datos de Productos
- * Aquí puedes editar, agregar o eliminar productos.
+ * PRODUCTOS DE ZAFIRO CROCHET
  * 
- * Estructura:
+ * Estructura de cada producto:
  * {
  *   id: número único,
  *   name: "Nombre del producto",
  *   price: precio actual,
  *   oldPrice: precio anterior (opcional, si se pone, sale en OFERTAS),
- *   category: "categoría" (ramos, snoopy, superheroes),
+ *   category: "categoría" o ["categoría1", "categoría2"] (puede ser string o array para múltiples categorías),
  *   image: "URL de la imagen",
  *   description: "Descripción breve",
  *   rating: número de estrellas (1-5)
@@ -79,11 +78,59 @@ const products = [
         id: 8,
         name: "Llavero de Batman 🦇",
         price: 25.00,
-        category: "personajes",
+        category: ["personajes", "llaveros"], // Array para múltiples categorías
         image: "fotos productos/batman.jpeg",
         images: [
             "fotos productos/batman.jpeg",
             "fotos productos/batman2.jpeg",
+        ],
+        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
+        rating: 5
+    },
+    {
+        id: 9,
+        name: "Llavero de Alegría",
+        price: 25.00,
+        category: ["personajes", "llaveros"], // Array para múltiples categorías
+        image: "fotos productos/alegria.jpeg",
+        images: [
+            "fotos productos/alegria.jpeg",
+        ],
+        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
+        rating: 5
+    },
+    {
+        id: 10,
+        name: "Llavero de Furia",
+        price: 25.00,
+        category: ["personajes", "llaveros"], // Array para múltiples categorías
+        image: "fotos productos/furia.jpeg",
+        images: [
+            "fotos productos/furia.jpeg",
+        ],
+        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
+        rating: 5
+    },
+    {
+        id: 11,
+        name: "Llavero de Verguenza",
+        price: 25.00,
+        category: ["personajes", "llaveros"], // Array para múltiples categorías
+        image: "fotos productos/verguenza.jpeg",
+        images: [
+            "fotos productos/verguenza.jpeg",
+        ],
+        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
+        rating: 5
+    },
+    {
+        id: 12,
+        name: "Llavero de Envidia",
+        price: 25.00,
+        category: ["personajes", "llaveros"], // Array para múltiples categorías
+        image: "fotos productos/envidia.jpeg",
+        images: [
+            "fotos productos/envidia.jpeg",
         ],
         description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
         rating: 5
