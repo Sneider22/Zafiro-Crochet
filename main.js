@@ -401,9 +401,12 @@ function renderCartExtras() {
   container.innerHTML = `
     <h4 class="extras-title">¿Deseas añadir bolsa o caja de regalo?</h4>
     <div class="extra-item">
-      <div class="extra-info">
-        <span class="extra-name">🛍️ Bolsa de regalo</span>
-        <span class="extra-price">+$2.00</span>
+      <div class="extra-main">
+        <img src="bolsa.jpeg" alt="Bolsa de regalo" class="extra-img">
+        <div class="extra-info">
+          <span class="extra-name">Bolsa de regalo</span>
+          <span class="extra-price">+$2.00</span>
+        </div>
       </div>
       <div class="extra-controls">
         <button onclick="changeExtra('giftBag', -1)">-</button>
@@ -412,9 +415,12 @@ function renderCartExtras() {
       </div>
     </div>
     <div class="extra-item">
-      <div class="extra-info">
-        <span class="extra-name">🎁 Caja de regalo</span>
-        <span class="extra-price">+$3.00</span>
+      <div class="extra-main">
+        <img src="caja.jpeg" alt="Caja de regalo" class="extra-img">
+        <div class="extra-info">
+          <span class="extra-name">Caja de regalo</span>
+          <span class="extra-price">+$3.00</span>
+        </div>
       </div>
       <div class="extra-controls">
         <button onclick="changeExtra('giftBox', -1)">-</button>
