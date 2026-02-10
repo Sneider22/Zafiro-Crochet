@@ -17,7 +17,7 @@
 const products = [
     // === RAMOS ===
     {
-        id: 1, name: "Snoopy Bouquet 🌹🌻", price: 40.00, oldPrice: 55.00,
+        id: 1, name: "Snoopy Bouquet 🌹🌻", price: 38.00, oldPrice: 45.00,
         category: "ramos",
         image: "fotos productos/ramo snoopy 1.jpg",
         images: [
@@ -28,7 +28,7 @@ const products = [
         rating: 5
     },
     {
-        id: 2, name: "Ramo de Flores Amarillas", price: 35.00, oldPrice: 55.00,
+        id: 2, name: "Ramo de Flores Amarillas", price: 45.00, oldPrice: 55.00,
         category: "ramos",
         image: "fotos productos/ramo girasol.jpeg",
         images: [
@@ -41,7 +41,7 @@ const products = [
 
     // === SNOOPY ===
     {
-        id: 3, name: "Snoopy Clásico", price: 18.00, category: "snoopy",
+        id: 3, name: "Snoopy Clásico", price: 10.00, category: "snoopy",
         image: "fotos productos/snoopygordo.jpeg",
         images: [
             "fotos productos/snoopygordo.jpeg",
@@ -55,7 +55,7 @@ const products = [
     // === PERSONAJES ===
     {
         id: 4,
-        name: "Cristiano Ronaldo Amigurumi", price: 25.00, category: "personajes",
+        name: "Cristiano Ronaldo Amigurumi", price: 22.00, oldPrice: 25.00, category: "personajes",
         image: "fotos productos/CR7.jpeg",
         images: [
             "fotos productos/CR7.jpeg",
@@ -65,7 +65,7 @@ const products = [
         rating: 5
     },
     {
-        id: 8, name: "Llavero de Batman 🦇", price: 25.00,
+        id: 8, name: "Llavero de Batman 🦇", price: 8.00,
         category: ["personajes", "llaveros"],
         image: "fotos productos/batman.jpeg",
         images: [
@@ -76,7 +76,7 @@ const products = [
         rating: 5
     },
     {
-        id: 9, name: "Llavero de Alegría", price: 25.00,
+        id: 9, name: "Llavero de Alegría", price: 10.00,
         category: ["personajes", "llaveros"],
         image: "fotos productos/alegria.jpeg",
         images: [
@@ -86,7 +86,7 @@ const products = [
         rating: 5
     },
     {
-        id: 10, name: "Llavero de Furia", price: 25.00,
+        id: 10, name: "Llavero de Furia", price: 10.00,
         category: ["personajes", "llaveros"],
         image: "fotos productos/furia.jpeg",
         images: [
@@ -96,27 +96,7 @@ const products = [
         rating: 5
     },
     {
-        id: 11, name: "Llavero de Verguenza", price: 25.00,
-        category: ["personajes", "llaveros"],
-        image: "fotos productos/verguenza.jpeg",
-        images: [
-            "fotos productos/verguenza.jpeg",
-        ],
-        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
-        rating: 5
-    },
-    {
-        id: 12, name: "Llavero de Envidia", price: 25.00,
-        category: ["personajes", "llaveros"],
-        image: "fotos productos/envidia.jpeg",
-        images: [
-            "fotos productos/envidia.jpeg",
-        ],
-        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.",
-        rating: 5
-    },
-    {
-        id: 18, name: "Ariana grande, era Positions💚", price: 40.00,
+        id: 18, name: "Ariana grande, era Positions💚", price: 22.00,
         category: ["personajes"],
         image: "fotos productos/ariana grande.jpeg",
         images: [
@@ -129,7 +109,7 @@ const products = [
 
     // === LLAVEROS ===
     {
-        id: 5, name: "Llaveros de abejitas", price: 25.00,
+        id: 5, name: "Llaveros de abejitas", price: 12.00,
         category: "llaveros",
         image: "fotos productos/llavero abeja.jpeg",
         images: [
@@ -140,7 +120,7 @@ const products = [
         rating: 5
     },
     {
-        id: 13, name: "Llavero de mono", price: 25.00,
+        id: 13, name: "Llavero de mono", price: 4.00,
         category: "llaveros",
         image: "fotos productos/mono llavero.jpeg",
         images: [
@@ -150,7 +130,7 @@ const products = [
         rating: 5
     },
     {
-        id: 14, name: "Dúo de fresas con chocolate 🍓", price: 25.00,
+        id: 14, name: "Dúo de fresas con chocolate 🍓", price: 8.00,
         category: "llaveros",
         image: "fotos productos/fresas.jpeg",
         images: [
@@ -160,7 +140,7 @@ const products = [
         rating: 5
     },
     {
-        id: 15, name: "Llavero mini pug🐶🐾", price: 25.00,
+        id: 15, name: "Llavero mini pug🐶🐾", price: 5.00,
         category: "llaveros",
         image: "fotos productos/perro bigote.jpeg",
         images: [
@@ -170,7 +150,7 @@ const products = [
         rating: 5
     },
     {
-        id: 16, name: "Totoro - Mi vecino Totoro", price: 25.00,
+        id: 16, name: "Totoro - Mi vecino Totoro", price: 6.50,
         category: "llaveros",
         image: "fotos productos/totoro llavero.jpeg",
         images: [
@@ -180,7 +160,7 @@ const products = [
         rating: 5
     },
     {
-        id: 17, name: "Llaveritos de Minions💛", price: 25.00,
+        id: 17, name: "Llaveritos de Minions💛", price: 6.00,
         category: "llaveros",
         image: "fotos productos/minion1.jpeg",
         images: [
@@ -191,7 +171,7 @@ const products = [
         rating: 5
     },
     {
-        id: 19, name: "Pareja de Chigüiritos ❤️", price: 25.00,
+        id: 19, name: "Pareja de Chigüiritos ❤️", price: 10.00,
         category: "llaveros",
         image: "fotos productos/capi1.jpeg",
         images: [
@@ -203,7 +183,7 @@ const products = [
         rating: 5
     },
     {
-        id: 20, name: "Llaveros de tulipanes🌷", price: 25.00,
+        id: 20, name: "Llaveros de tulipanes🌷 c/u", price: 4.99,
         category: "llaveros",
         image: "fotos productos/tulipanes.jpeg",
         images: [
@@ -213,7 +193,7 @@ const products = [
         rating: 5
     },
     {
-        id: 21, name: "Llaveritos de medusas", price: 18.00,
+        id: 21, name: "Llaveritos de medusas", price: 13.00,
         category: "llaveros",
         image: "fotos productos/medusas.jpeg",
         images: [
@@ -238,7 +218,7 @@ const products = [
 
     // === PERSONALIZADOS ===
     {
-        id: 7, name: "Pareja de amigurumis personalizados 🤍", price: 25.00,
+        id: 7, name: "Pareja de amigurumis personalizados 🤍", price: 40.00, oldPrice: 50.00,
         category: "personalizados",
         image: "fotos productos/parejapollo.jpeg",
         images: [

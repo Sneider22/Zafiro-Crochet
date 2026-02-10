@@ -558,7 +558,8 @@ header {
 }
 
 .cart-items-container {
-  max-height: 50vh;
+  max-height: 250px;
+  /* Limitado a aprox 3 productos */
   /* Better scroll for cart */
   overflow-y: auto;
   margin-bottom: 1rem;
