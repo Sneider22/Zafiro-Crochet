@@ -506,12 +506,12 @@ function checkoutWhatsApp() {
   if (state.extras.giftBag > 0) {
     const cost = state.extras.giftBag * 2;
     total += cost;
-    message += `🛍️ *Bolsa de regalo* (x${state.extras.giftBag}) - $${cost.toFixed(2)}\n`;
+    message += `🛍️ Bolsa de regalo (x${state.extras.giftBag}) - $${cost.toFixed(2)}\n`;
   }
   if (state.extras.giftBox > 0) {
     const cost = state.extras.giftBox * 3;
     total += cost;
-    message += `🎁 *Caja de regalo* (x${state.extras.giftBox}) - $${cost.toFixed(2)}\n`;
+    message += `🎁 Caja de regalo (x${state.extras.giftBox}) - $${cost.toFixed(2)}\n`;
   }
 
   message += `\n💰 *TOTAL A PAGAR: $${total.toFixed(2)}*`;
@@ -558,49 +558,61 @@ function setupEventListeners() {
     history.pushState({ modal: 'login' }, '');
   });
 
+  // === TO-DO LIST ADMIN ===
+  let todos = JSON.parse(localStorage.getItem('adminTodos')) || [];
+
+  function renderTodos() {
+    const container = document.getElementById('todoList');
+    if (!container) return;
+
+    container.innerHTML = todos.length === 0
+      ? '<p style="text-align:center; color:#999; margin-top:1rem;">No hay pendientes. ¡Buen trabajo! ✨</p>'
+      : todos.map((todo, index) => `
+          <div class="todo-item">
+            <span class="todo-text">${todo}</span>
+            <button onclick="deleteTodo(${index})" class="delete-todo">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        `).join('');
+  }
+
+  // Global functions for onclick handlers
+  window.addTodo = () => {
+    const input = document.getElementById('todoInput');
+    const text = input.value.trim();
+
+    if (text) {
+      todos.unshift(text);
+      saveTodos();
+      input.value = '';
+      renderTodos();
+    }
+  };
+
+  window.deleteTodo = (index) => {
+    todos.splice(index, 1);
+    saveTodos();
+    renderTodos();
+  };
+
+  function saveTodos() {
+    localStorage.setItem('adminTodos', JSON.stringify(todos));
+  }
+
   document.getElementById('loginForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const user = document.getElementById('usernameInput').value;
     const pass = document.getElementById('passwordInput').value;
 
-    if (user === 'sofiavsh' && pass === 'pato1234..') {
+    if (user === 'sofiavsh' && pass === 'pato123') {
       closeLogin();
-      // Mostrar Panel de Admin (Generador de Código)
       document.getElementById('adminPanelModal').classList.add('active');
+      renderTodos();
       history.pushState({ modal: 'admin' }, '');
     } else {
       alert("Credenciales incorrectas");
     }
-  });
-
-  // Generador de Código de Producto
-  document.getElementById('generateBtn').addEventListener('click', () => {
-    const name = document.getElementById('newProdName').value;
-    const price = parseFloat(document.getElementById('newProdPrice').value);
-    const oldPrice = parseFloat(document.getElementById('newProdOldPrice').value) || null;
-    const category = document.getElementById('newProdCategory').value;
-    const image = document.getElementById('newProdImage').value || "https://placehold.co/400";
-    const desc = document.getElementById('newProdDesc').value;
-
-    // Generar ID aleatorio basado en timestamp
-    const id = Date.now();
-
-    const newObj = {
-      id: id,
-      name: name,
-      price: price,
-      category: category,
-      image: image,
-      description: desc,
-      rating: 5
-    };
-
-    if (oldPrice) newObj.oldPrice = oldPrice;
-
-    const codeSnippet = `,\n    ${JSON.stringify(newObj, null, 4)}`;
-
-    document.getElementById('generatedCode').value = codeSnippet;
-    alert("¡Código generado! Copia el texto y pégalo en products.js al final de la lista.");
   });
 }
 
