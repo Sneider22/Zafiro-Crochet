@@ -5,7 +5,11 @@ let state = {
   filter: 'all',
   search: '',
   currentPage: 1,
-  itemsPerPage: 6
+  itemsPerPage: 6,
+  extras: {
+    giftBag: 0,
+    giftBox: 0
+  }
 };
 
 // Elementos del DOM
@@ -279,6 +283,7 @@ function updateCartCount() {
 function openCart() {
   document.getElementById('cartModal').classList.add('active');
   renderCartItems();
+  renderCartExtras();
   // Agregar estado al historial para manejar el botón "atrás"
   history.pushState({ modal: 'cart' }, '');
 }
@@ -386,6 +391,53 @@ function renderCartItems() {
   }).join('');
 
   cartTotalElement.innerText = `$${total.toFixed(2)}`;
+  renderCartExtras(); // Actualizar el total general después de items
+}
+
+function renderCartExtras() {
+  const container = document.getElementById('cartExtras');
+  if (!container) return;
+
+  container.innerHTML = `
+    <h4 class="extras-title">¿Deseas añadir bolsa o caja de regalo?</h4>
+    <div class="extra-item">
+      <div class="extra-info">
+        <span class="extra-name">🛍️ Bolsa de regalo</span>
+        <span class="extra-price">+$2.00</span>
+      </div>
+      <div class="extra-controls">
+        <button onclick="changeExtra('giftBag', -1)">-</button>
+        <span class="extra-qty">${state.extras.giftBag}</span>
+        <button onclick="changeExtra('giftBag', 1)">+</button>
+      </div>
+    </div>
+    <div class="extra-item">
+      <div class="extra-info">
+        <span class="extra-name">🎁 Caja de regalo</span>
+        <span class="extra-price">+$3.00</span>
+      </div>
+      <div class="extra-controls">
+        <button onclick="changeExtra('giftBox', -1)">-</button>
+        <span class="extra-qty">${state.extras.giftBox}</span>
+        <button onclick="changeExtra('giftBox', 1)">+</button>
+      </div>
+    </div>
+  `;
+
+  updateCartTotalWithExtras();
+}
+
+function changeExtra(type, delta) {
+  state.extras[type] += delta;
+  if (state.extras[type] < 0) state.extras[type] = 0;
+  renderCartExtras();
+}
+
+function updateCartTotalWithExtras() {
+  let total = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  total += state.extras.giftBag * 2;
+  total += state.extras.giftBox * 3;
+  cartTotalElement.innerText = `$${total.toFixed(2)}`;
 }
 
 /* === SEARCH SUGGESTIONS === */
@@ -443,6 +495,18 @@ function checkoutWhatsApp() {
     const emoji = categoryEmojis[item.category] || '•';
     message += `${emoji} *${item.name}* (x${item.quantity}) - $${subtotal.toFixed(2)}\n`;
   });
+
+  // Añadir Extras
+  if (state.extras.giftBag > 0) {
+    const cost = state.extras.giftBag * 2;
+    total += cost;
+    message += `🛍️ *Bolsa de regalo* (x${state.extras.giftBag}) - $${cost.toFixed(2)}\n`;
+  }
+  if (state.extras.giftBox > 0) {
+    const cost = state.extras.giftBox * 3;
+    total += cost;
+    message += `🎁 *Caja de regalo* (x${state.extras.giftBox}) - $${cost.toFixed(2)}\n`;
+  }
 
   message += `\n💰 *TOTAL A PAGAR: $${total.toFixed(2)}*`;
   message += `\n\nQuedo atento a la confirmación. Gracias!`;

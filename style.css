@@ -1141,3 +1141,76 @@ footer {
 .form-grid {
   grid-template-columns: 1fr;
 }
+
+/* === EXTRAS EN EL CARRITO === */
+.cart-extras-container {
+  padding: 0.8rem 0;
+  border-top: 1px dashed var(--accent);
+  margin-top: 0.5rem;
+}
+
+.extras-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.extra-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.extra-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.extra-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.extra-price {
+  font-size: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.extra-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--secondary);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+}
+
+.extra-controls button {
+  background: var(--white);
+  border: 1px solid var(--accent);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.extra-controls button:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.extra-qty {
+  font-size: 0.85rem;
+  font-weight: 800;
+  min-width: 15px;
+  text-align: center;
+}
