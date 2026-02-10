@@ -440,7 +440,7 @@ function checkoutWhatsApp() {
   state.cart.forEach(item => {
     const subtotal = item.price * item.quantity;
     total += subtotal;
-    const emoji = categoryEmojis[item.category] || '🎁';
+    const emoji = categoryEmojis[item.category] || '•';
     message += `${emoji} *${item.name}* (x${item.quantity}) - $${subtotal.toFixed(2)}\n`;
   });
 
