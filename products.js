@@ -160,14 +160,13 @@ const products = [
         rating: 5
     },
     {
-        id: 17, name: "Llaveritos de Minions💛", price: 6.00,
+        id: 17, name: "Llaverito de Minions💛", price: 6.00,
         category: "llaveros",
         image: "fotos productos/minion1.jpeg",
         images: [
             "fotos productos/minion1.jpeg",
-            "fotos productos/minion2.jpeg",
         ],
-        description: "Desliza para ver sus dos versiones 👉. Medida: 5cm aprox. Material: 100% Acrílico, hipoalergénico🧶",
+        description: "Medida: 5cm aprox. Material: 100% Acrílico, hipoalergénico🧶",
         rating: 5
     },
     {
@@ -210,7 +209,6 @@ const products = [
         image: "fotos productos/vaquita.jpeg",
         images: [
             "fotos productos/vaquita.jpeg",
-            "fotos productos/vaquita2.jpeg",
         ],
         description: "Tejida con una lana suave y esponjosa 🧶. Medida: 27cm. Material: Lana Chenille.",
         rating: 5

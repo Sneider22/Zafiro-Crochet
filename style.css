@@ -991,40 +991,65 @@ footer {
 
 .form-group textarea {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.6rem;
   border: 1px solid var(--accent);
   border-radius: 8px;
   font-family: inherit;
   resize: vertical;
-}
-
-.code-area {
-  margin-top: 1.5rem;
-  background: #f8f9fa;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px dashed #ccc;
-}
-
-.code-area textarea {
-  width: 100%;
-  font-family: monospace;
-  font-size: 0.8rem;
-  border: none;
-  background: transparent;
-  color: #333;
-  outline: none;
-}
-
-.instruction {
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
-  background: #eefbff;
-  padding: 0.8rem;
-  border-radius: 6px;
-  border-left: 4px solid var(--primary);
 }
+
+/* Compact Admin & Login */
+.login-modal,
+.admin-content {
+  padding: 1.5rem !important;
+  max-width: 400px !important;
+}
+
+.admin-content {
+  max-width: 550px !important;
+}
+
+.login-modal h2,
+.admin-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.login-modal .form-group,
+.admin-content .form-group {
+  margin-bottom: 0.8rem;
+}
+
+.login-modal .form-group label,
+.admin-content .form-group label {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.login-modal input,
+.admin-content input,
+.admin-content select,
+.admin-content textarea {
+  padding: 0.4rem !important;
+  font-size: 0.8rem !important;
+}
+
+.admin-content .form-grid {
+  gap: 0.4rem;
+}
+
+.admin-content .instruction {
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.admin-content .code-area {
+  margin-top: 1rem;
+  padding: 0.8rem;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
