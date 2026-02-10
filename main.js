@@ -543,7 +543,7 @@ function sendSuggestion() {
   if (!input.trim()) return alert("Por favor escribe algo :)");
 
   const phoneNumber = "584142826330";
-  const message = `Hola! 👋 Tengo una sugerencia para un nuevo producto:\n\n✨ *${input}*\n\n¿Qué te parece?`;
+  const message = `Hola! 👋 Estoy interesad@ en un amigurumi personalizado de:\n\n✨ ${input}\n`;
 
   const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
