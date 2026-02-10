@@ -21,9 +21,12 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 
 // Mapeo de categorías a emojis
 const categoryEmojis = {
-  'ramos': '💐',
-  'snoopy': '🐶',
-  'superheroes': '🦸'
+  'ramos': '•',
+  'snoopy': '•',
+  'superheroes': '•',
+  'llaveros': '•',
+  'personajes': '•',
+  'peluches': '•',
 };
 
 /* === INICIALIZACIÓN === */
@@ -414,8 +417,15 @@ function showSearchSuggestions(query) {
 }
 
 function selectSuggestion(productName) {
-  searchInput.value = productName;
-  state.search = productName;
+  // Encontrar el producto y abrir su modal
+  const product = state.products.find(p => p.name === productName);
+  if (product) {
+    openProductModal(product.id);
+  }
+
+  // Limpiar el campo de búsqueda y resetear el estado
+  searchInput.value = '';
+  state.search = '';
   renderApp();
   searchSuggestions.classList.remove('active');
 }
