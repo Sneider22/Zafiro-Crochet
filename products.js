@@ -18,34 +18,22 @@ const products = [
     // === RAMOS ===
     // === SNOOPY ===
     {
-        id: 1, name: "Snoopy Bouquet 🌹🌻", price: 38.00, oldPrice: 45.00, category: ["ramos", "snoopy"],
+        id: 1, name: "Snoopy Bouquet 🌹🌻", price: 35.00, oldPrice: 40.00, category: ["ramos", "snoopy"],
         image: "fotos productos/ramo snoopy 1.jpg",
         images: ["fotos productos/ramo snoopy 1.jpg", "fotos productos/ramo snoopy 2.jpeg",],
         description: "Este ramo contiene 3 girasoles, 3 rosas y un Snoopy aviador 🤍", rating: 5
     },
     {
-        id: 2, name: "Ramo de Flores Amarillas", price: 45.00, oldPrice: 55.00, category: "ramos",
-        image: "fotos productos/ramo girasol.jpeg",
-        images: ["fotos productos/ramo girasol.jpeg", "fotos productos/ramo girasol2.jpeg",],
-        description: "Uno de nuestros ramos favoritos de flores amarillas 🌻💛", rating: 5
+        id: 56, name: "Peluche de snoopy", price: 25.00, category: ["peluches", "snoopy"],
+        image: "fotos productos/peluchesnoo.jpg",
+        images: ["fotos productos/peluchesnoo.jpg", "fotos productos/peluchesnoo2.jpg", "fotos productos/peluchesnoo3.jpg"],
+        description: "Tejido con una lana suave y esponjosa 🧶. Medida: 27cm. Material: Lana Chenille.", rating: 5
     },
     {
-        id: 3, name: "Snoopy Clásico", price: 10.00, category: "snoopy",
-        image: "fotos productos/snoopygordo.jpeg",
-        images: ["fotos productos/snoopygordo.jpeg", "fotos productos/snoopygordo2.jpeg", "fotos productos/snoopygordo3.jpeg",],
-        description: "Snoopy. Medida: 11cm aprox. Material: 100% Algodón", rating: 5
-    },
-    {
-        id: 43, name: "Snoopy aviador y Woodstock", price: 14.00, category: "snoopy",
-        image: "fotos productos/snoopyavion.jpg",
-        images: ["fotos productos/snoopyavion.jpg"],
-        description: "Estos llaveros tienen una medida de 11cm y 5cm. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
-    },
-    {
-        id: 49, name: "Mini Snoopy", price: 5.00, category: "snoopy",
-        image: "fotos productos/minisnoopy.jpg",
-        images: ["fotos productos/minisnoopy.jpg", "fotos productos/minisnoopy2.jpg",],
-        description: "Este llaverito tiene una medida de 4.5cm. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
+        id: 30, name: "Llaveros de Harry Potter, Ron y Hermione", price: 8.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/HRH.jpg",
+        images: ["fotos productos/HRH.jpg",],
+        description: "Medida: 8.5cm aprox. Material: 100% Acrílico, hipoalergénico🧶. 8$ c/u", rating: 5
     },
     {
         id: 54, name: "Pareja de Snoopy con Imanes", price: 12.00, category: "snoopy",
@@ -54,13 +42,61 @@ const products = [
         description: "Estos llaveros tiene una medida de 4.5cm. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
     },
     {
+        id: 18, name: "Ariana grande, era Positions", price: 22.00, category: ["personajes"],
+        image: "fotos productos/ariana grande.jpeg",
+        images: ["fotos productos/ariana grande.jpeg",],
+        description: "Medida: 18cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 2, name: "Ramo de Flores Amarillas", price: 45.00, oldPrice: 55.00, category: "ramos",
+        image: "fotos productos/ramo girasol.jpeg",
+        images: ["fotos productos/ramo girasol.jpeg", "fotos productos/ramo girasol2.jpeg",],
+        description: "Uno de nuestros ramos favoritos de flores amarillas 🌻💛", rating: 5
+    },
+    {
+        id: 43, name: "Snoopy aviador y Woodstock", price: 14.00, category: "snoopy",
+        image: "fotos productos/snoopyavion.jpg",
+        images: ["fotos productos/snoopyavion.jpg"],
+        description: "Estos llaveros tienen una medida de 11cm y 5cm. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
+    },
+    {
+        id: 3, name: "Snoopy Clásico", price: 10.00, category: "snoopy",
+        image: "fotos productos/snoopygordo3.jpeg",
+        images: ["fotos productos/snoopygordo3.jpeg", "fotos productos/snoopygordo.jpeg", "fotos productos/snoopygordo2.jpeg",],
+        description: "Snoopy. Medida: 11cm aprox. Material: 100% Algodón", rating: 5
+    },
+    {
+        id: 49, name: "Mini Snoopy", price: 5.00, category: "snoopy",
+        image: "fotos productos/minisnoopy.jpg",
+        images: ["fotos productos/minisnoopy.jpg", "fotos productos/minisnoopy2.jpg",],
+        description: "Este llaverito tiene una medida de 4.5cm. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
+    },
+    {
         id: 58, name: "Ramo de tulipanes y Snoopy", price: 25.00, category: ["ramos", "snoopy"],
         image: "fotos productos/ramosnoo.jpg",
         images: ["fotos productos/ramosnoo.jpg"],
         description: "Este ramo contiene 3 tulipanes y un Snoopy. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
     },
+    {
+        id: 62, name: "Ramo de Hello Kitty", price: 18.00, category: ["ramos"],
+        image: "fotos productos/hellokitty.jpg",
+        images: ["fotos productos/hellokitty.jpg"],
+        description: "Este ramo contiene 2 margaritas y una Hello Kitty. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
+    },
 
     // === PERSONAJES ===
+    {
+        id: 57, name: "Llavero de Pochacco - sanrio", price: 8.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/pochacogordo.jpg",
+        images: ["fotos productos/pochacogordo.jpg"],
+        description: "Medida: 6cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 59, name: "Llavero de Stitch", price: 8.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/stitch.jpg",
+        images: ["fotos productos/stitch.jpg"],
+        description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
     {
         id: 4, name: "Cristiano Ronaldo Amigurumi", price: 22.00, oldPrice: 25.00, category: "personajes",
         image: "fotos productos/CR7.jpeg",
@@ -84,12 +120,6 @@ const products = [
         image: "fotos productos/furia.jpeg",
         images: ["fotos productos/furia.jpeg",],
         description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.", rating: 5
-    },
-    {
-        id: 18, name: "Ariana grande, era Positions", price: 22.00, category: ["personajes"],
-        image: "fotos productos/ariana grande.jpeg",
-        images: ["fotos productos/ariana grande.jpeg",],
-        description: "Medida: 18cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 32, name: "Shrek", price: 15.00, category: ["personajes"],
@@ -150,12 +180,6 @@ const products = [
         image: "fotos productos/spiderman.jpg",
         images: ["fotos productos/spiderman.jpg"],
         description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
-    },
-    {
-        id: 57, name: "Llavero de Pochacco - sanrio", price: 8.00, category: ["personajes", "llaveros"],
-        image: "fotos productos/pochacogordo.jpg",
-        images: ["fotos productos/pochacogordo.jpg"],
-        description: "Medida: 6cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
 
     // === LLAVEROS ===
@@ -268,12 +292,6 @@ const products = [
         description: "Medida: 6cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 30, name: "Llaveros de Harry Potter, Ron y Hermione", price: 8.00, category: ["personajes", "llaveros"],
-        image: "fotos productos/HRH.jpg",
-        images: ["fotos productos/HRH.jpg",],
-        description: "Medida: 8.5cm aprox. Material: 100% Acrílico, hipoalergénico🧶. 8$ c/u", rating: 5
-    },
-    {
         id: 31, name: "Llavero de Pikachu - pokemon", price: 10.00, category: ["personajes", "llaveros"],
         image: "fotos productos/pikachu1.png",
         images: ["fotos productos/pikachu1.png", "fotos productos/pikachu2.png", "fotos productos/pikachu3.png",],
@@ -314,6 +332,12 @@ const products = [
         image: "fotos productos/voley.jpg",
         images: ["fotos productos/voley.jpg"],
         description: "Medida: 4.5cm aprox. Material: 100% Acrílico, hipoalergénico🧶. 6$ c/U", rating: 5
+    },
+    {
+        id: 61, name: "Bolsita porta audífonos", price: 10.00, category: ["llaveros"],
+        image: "fotos productos/saquito.jpg",
+        images: ["fotos productos/saquito.jpg", "fotos productos/saquito2.jpg"],
+        description: "Guarda tus audífonos, dinero y accesorios en nuestras funditas. Perfectas para colgar en tus bolsos. Material: 100% Acrílico, hipoalergénico🧶.", rating: 5
     },
 
 
@@ -356,17 +380,39 @@ const products = [
         description: "Medida: 20cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
+        id: 60, name: "Llavero mascota- Gato", price: 10.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos/gatoazul.jpg",
+        images: ["fotos productos/gatoazul.jpg", "fotos productos/gatoazul2.jpg"],
+        description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
         id: 48, name: "Peluche de oso", price: 30.00, category: "peluches",
         image: "fotos productos/oso1.jpg",
         images: ["fotos productos/oso1.jpg", "fotos productos/oso2.jpg"],
         description: "Tejido con una lana suave y esponjosa 🧶. Medida: 27cm. Material: Lana Chenille.", rating: 5
     },
     {
-        id: 56, name: "Peluche de snoopy", price: 25.00, category: ["peluches", "snoopy"],
-        image: "fotos productos/peluchesnoo.jpg",
-        images: ["fotos productos/peluchesnoo.jpg", "fotos productos/peluchesnoo2.jpg", "fotos productos/peluchesnoo3.jpg"],
+        id: 63, name: "Peluches de Snoopys en pareja", price: 45.00, category: "peluches",
+        image: "fotos productos/parejapeluchesnoo.jpg",
+        images: ["fotos productos/parejapeluchesnoo.jpg",],
         description: "Tejido con una lana suave y esponjosa 🧶. Medida: 27cm. Material: Lana Chenille.", rating: 5
     },
-
-
+    {
+        id: 64, name: "Peluche de Totoro", price: 20.00, category: "peluches",
+        image: "fotos productos/totogordo.jpg",
+        images: ["fotos productos/totogordo.jpg",],
+        description: "Tejido con una lana suave y esponjosa 🧶. Medida: 18cm. Material: Lana Chenille.", rating: 5
+    },
+    {
+        id: 65, name: "Mascota mediana personalizada - Hamster", price: 16.00, category: ["personalizados"],
+        image: "fotos productos/hamster.jpg",
+        images: ["fotos productos/hamster.jpg"],
+        description: "Medida: 13cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 66, name: "Pareja de amigurumis personalizados", price: 36.00, category: "personalizados",
+        image: "fotos productos/parejaveru.jpg",
+        images: ["fotos productos/parejaveru.jpg"],
+        description: "Estos lindos amigurumis miden 15cm y 17cm de alto aprox.", rating: 5
+    },
 ];

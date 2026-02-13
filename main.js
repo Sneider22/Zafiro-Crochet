@@ -490,17 +490,25 @@ function showSearchSuggestions(query) {
 }
 
 function selectSuggestion(productName) {
-  // Encontrar el producto y abrir su modal
-  const product = state.products.find(p => p.name === productName);
-  if (product) {
-    openProductModal(product.id);
-  }
+  // Actualizar el estado de búsqueda con el nombre seleccionado
+  state.search = productName;
+  state.filter = 'all'; // Resetear filtro de categoría para asegurar que se encuentre
+  state.currentPage = 1; // Ir a la primera página
 
-  // Limpiar el campo de búsqueda y resetear el estado
+  // Actualizar el input visualmente (limpiar según petición del usuario)
   searchInput.value = '';
-  state.search = '';
+
+  // Renderizar la aplicación con el nuevo filtro de búsqueda
   renderApp();
+
+  // Cerrar sugerencias
   searchSuggestions.classList.remove('active');
+
+  // Scroll suave al catálogo para ver los resultados
+  const catalogSection = document.getElementById('catalogo');
+  if (catalogSection) {
+    catalogSection.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
 function checkoutWhatsApp() {
@@ -538,6 +546,15 @@ function checkoutWhatsApp() {
 
 /* === FILTROS & EVENTOS === */
 function setupEventListeners() {
+  // Volver arriba al hacer clic en el logo
+  const logoElements = document.querySelectorAll('.logo-placeholder, .logo-text');
+  logoElements.forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
   // Búsqueda con autocompletado
   searchInput.addEventListener('input', (e) => {
     state.search = e.target.value;
@@ -560,8 +577,12 @@ function setupEventListeners() {
       filterButtons.forEach(b => b.classList.remove('active'));
       // Activar el actual
       btn.classList.add('active');
+
       // Actualizar estado
       state.filter = btn.dataset.category;
+      state.search = ''; // Limpiar búsqueda al cambiar de categoría
+      searchInput.value = ''; // Limpiar input visualmente
+
       state.currentPage = 1; // Reset a página 1
       renderApp();
     });
