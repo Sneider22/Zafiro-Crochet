@@ -128,8 +128,16 @@ function renderPagination(totalPages) {
     </button>
   `;
 
-  // Números de página
-  for (let i = 1; i <= totalPages; i++) {
+  // Números de página (Lógica de ventana deslizante - Max 5)
+  const maxVisibleButtons = 5;
+  let startPage = Math.max(1, state.currentPage - Math.floor(maxVisibleButtons / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
+
+  if (endPage - startPage + 1 < maxVisibleButtons) {
+    startPage = Math.max(1, endPage - maxVisibleButtons + 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
     paginationHTML += `
       <button class="pagination-btn ${i === state.currentPage ? 'active' : ''}" onclick="changePage(${i})">
         ${i}
@@ -150,7 +158,14 @@ function renderPagination(totalPages) {
 
 function changePage(page) {
   const filtered = state.products.filter(p => {
-    const matchesCategory = state.filter === 'all' || p.category === state.filter;
+    let matchesCategory = state.filter === 'all';
+    if (!matchesCategory) {
+      if (Array.isArray(p.category)) {
+        matchesCategory = p.category.includes(state.filter);
+      } else {
+        matchesCategory = p.category === state.filter;
+      }
+    }
     const matchesSearch = p.name.toLowerCase().includes(state.search.toLowerCase());
     return matchesCategory && matchesSearch;
   });
