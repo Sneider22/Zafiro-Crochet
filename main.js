@@ -555,12 +555,26 @@ function setupEventListeners() {
     });
   });
 
-  // Búsqueda con autocompletado
+  // Búsqueda con autocompletado (modificado para evitar saltos de layout en móvil)
   searchInput.addEventListener('input', (e) => {
     state.search = e.target.value;
-    state.currentPage = 1; // Reset a página 1
-    renderApp();
+    // state.currentPage = 1; // Se quita el render en vivo
+    // renderApp(); // Se quita el render en vivo para evitar saltos
     showSearchSuggestions(e.target.value);
+  });
+
+  // Nuevo: Buscar al presionar Enter
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      state.currentPage = 1;
+      renderApp();
+      searchSuggestions.classList.remove('active');
+      // Scroll suave al catálogo para ver los resultados
+      const catalogSection = document.getElementById('catalogo');
+      if (catalogSection) {
+        catalogSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   });
 
   // Cerrar sugerencias al hacer clic fuera
