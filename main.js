@@ -546,11 +546,27 @@ function checkoutWhatsApp() {
 
 /* === FILTROS & EVENTOS === */
 function setupEventListeners() {
-  // Volver arriba al hacer clic en el logo
+  // Volver arriba al hacer clic en el logo y resetear app
   const logoElements = document.querySelectorAll('.logo-placeholder, .logo-text');
   logoElements.forEach(el => {
     el.style.cursor = 'pointer';
     el.addEventListener('click', () => {
+      // Resetear estado
+      state.search = '';
+      state.filter = 'all';
+      state.currentPage = 1;
+
+      // Limpiar input visualmente
+      searchInput.value = '';
+
+      // Resetear botones de filtro visualmente
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.category === 'all') btn.classList.add('active');
+      });
+
+      // Renderizar y scroll
+      renderApp();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });

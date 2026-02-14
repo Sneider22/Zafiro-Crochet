@@ -30,6 +30,114 @@ const products = [
         description: "Tejido con una lana suave y esponjosa 🧶. Medida: 27cm. Material: Lana Chenille.", rating: 5
     },
     {
+        id: 85, name: "Peluche de Yoshi", price: 45.00, category: ["personajes", "peluches"],
+        image: "fotos productos/yoshi1.jpg",
+        images: ["fotos productos/yoshi1.jpg", "fotos productos/yoshi2.jpg", "fotos productos/yoshi3.jpg", "fotos productos/yoshi4.jpg",],
+        description: " Medida: 27cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 67, name: "Pareja Carl y Ellie - UP", price: 36.00, category: ["personajes"],
+        image: "fotos productos/up.jpg",
+        images: ["fotos productos/up.jpg"],
+        description: "Medida: 18cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 68, name: "Ramo doctora personalizado ", price: 54.00, category: ["ramos"],
+        image: "fotos productos/ramodoc.jpg",
+        images: ["fotos productos/ramodoc.jpg"],
+        description: "Este ramo contiene dos gerberas, 4 tulipanes y una doctora de 18cm. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 69, name: "Pareja de pingüinos ", price: 28.00, category: ["personalizados"],
+        image: "fotos productos/pingui1.jpg",
+        images: ["fotos productos/pingui1.jpg", "fotos productos/pingui2.jpg"],
+        description: "Medida: 10cm aprox. Material: 100% Acrílico,  hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 92, name: "Peluche de BbokAri - Stray Kids", price: 25.00, category: ["personajes", "peluches"],
+        image: "fotos productos/pollorojo.jpg",
+        images: ["fotos productos/pollorojo.jpg", "fotos productos/pollorojo2.jpg",],
+        description: " Medida: 25cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 71, name: "Ramo rosas y tulipanes", price: 35.00, category: ["ramos"],
+        image: "fotos productos/ramorosa1.jpg",
+        images: ["fotos productos/ramorosa1.jpg", "fotos productos/ramorosa2.jpg",],
+        description: " Este ramo incluye: 2 rosas, 3 tulipanes abiertos, 2 margaritas. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 72, name: "Ramo Personalizado Gatos", price: 45.00, category: ["ramos", "personalizados"],
+        image: "fotos productos/ramogatos1.jpg",
+        images: ["fotos productos/ramogatos1.jpg", "fotos productos/ramogatos2.jpg",],
+        description: " Este ramo incluye: 4 gatos de 8cm, 3 margaritas Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 74, name: "Llavero mascota - Gato", price: 10.00, category: ["llaveros", "personalizados"],
+        image: "fotos productos/gatonegro.jpg",
+        images: ["fotos productos/gatonegro.jpg",],
+        description: " Medida: 8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 75, name: "Llavero mascota - Perro", price: 10.00, category: ["llaveros", "personalizados"],
+        image: "fotos productos/bigoton.jpg",
+        images: ["fotos productos/bigoton.jpg",],
+        description: " Medida: 8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 76, name: "Ramo dinosaurios", price: 32.00, category: ["ramos"],
+        image: "fotos productos/dino.jpg",
+        images: ["fotos productos/dino.jpg", "fotos productos/dino2.jpg",],
+        description: " Este ramo incluye: 2 dinosaurios de 8cm, 3 rosas. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 77, name: "Ramo Cristiano Ronaldo", price: 25.00, category: ["ramos", "personalizados"],
+        image: "fotos productos/cris.jpg",
+        images: ["fotos productos/cris.jpg",],
+        description: " Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 78, name: "Pepe el pollo", price: 20.00, category: ["personajes"],
+        image: "fotos productos/pepe.jpg",
+        images: ["fotos productos/pepe.jpg",],
+        description: " Medida: 20cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 80, name: "Ramo Variado", price: 40.00, category: ["ramos"],
+        image: "fotos productos/ramovariado.jpg",
+        images: ["fotos productos/ramovariado.jpg", "fotos productos/ramovariado2.jpg",],
+        description: " Este ramo incluye: 1 margarita premium, 2 rosas, 4 tulipanes, 1 abeja, 1 corazón. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 81, name: "Ramo Snoopy lirio", price: 23.00, category: ["ramos", "snoopy"],
+        image: "fotos productos/ramolirio.jpg",
+        images: ["fotos productos/ramolirio.jpg", "fotos productos/ramolirio2.jpg",],
+        description: " Este ramo incluye: 1 Snoopy clásico, 1 Lirio, 6 mini margaritas. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 83, name: "Ramo Snoopy Rosa", price: 23.00, category: ["ramos", "snoopy"],
+        image: "fotos productos/snoopyrosa.jpg",
+        images: ["fotos productos/snoopyrosa.jpg",],
+        description: " Este ramo incluye: 1 Snoopy clásico, 1 rosa, 6 mini margaritas. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 84, name: "Ramo Pollito Girasol", price: 30.00, category: ["ramos"],
+        image: "fotos productos/pollito.jpg",
+        images: ["fotos productos/pollito.jpg",],
+        description: " Este ramo incluye: 1 pollito de 8cm , 3 mini girasoles, 4 mini margaritas, 3 mini corazones. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 86, name: "Ramo Pollito Girasol", price: 30.00, category: ["ramos"],
+        image: "fotos productos/pollito.jpg",
+        images: ["fotos productos/pollito.jpg",],
+        description: " Este ramo incluye: 1 pollito de 8cm , 3 mini girasoles, 4 mini margaritas, 3 mini corazones. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 87, name: "Llavero de cactus", price: 8.00, category: ["llaveros"],
+        image: "fotos productos/cactus.jpg",
+        images: ["fotos productos/cactus.jpg",],
+        description: "Medida: 7cm aprox. Material: 100% Acrílico, hipoalergénico🧶. 8$ c/u", rating: 5
+    },
+    {
         id: 30, name: "Llaveros de Harry Potter, Ron y Hermione", price: 8.00, category: ["personajes", "llaveros"],
         image: "fotos productos/HRH.jpg",
         images: ["fotos productos/HRH.jpg",],
@@ -40,12 +148,6 @@ const products = [
         image: "fotos productos/parejasnoo.jpg",
         images: ["fotos productos/parejasnoo.jpg", "fotos productos/parejasnoo2.jpg",],
         description: "Estos llaveros tiene una medida de 4.5cm. Material: 100% Acrílico, hipoalergénico🧶 Snoopy: 10$ y Woodstock: 4$", rating: 5
-    },
-    {
-        id: 18, name: "Ariana grande, era Positions", price: 22.00, category: ["personajes"],
-        image: "fotos productos/ariana grande.jpeg",
-        images: ["fotos productos/ariana grande.jpeg",],
-        description: "Medida: 18cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 2, name: "Ramo de Flores Amarillas", price: 45.00, oldPrice: 55.00, category: "ramos",
@@ -98,28 +200,34 @@ const products = [
         description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 4, name: "Cristiano Ronaldo Amigurumi", price: 22.00, oldPrice: 25.00, category: "personajes",
+        id: 4, name: "Cristiano Ronaldo Amigurumi", price: 20.00, oldPrice: 25.00, category: "personajes",
         image: "fotos productos/CR7.jpeg",
         images: ["fotos productos/CR7.jpeg", "fotos productos/CR7SI.jpeg",],
         description: "El mayor goleador de la historia.", rating: 5
+    },
+    {
+        id: 93, name: "Llavero de Cristiano Ronaldo - Real Madrid", price: 12.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/llaverocris.jpg",
+        images: ["fotos productos/llaverocris.jpg"],
+        description: "Medida: 11cm. Material: 100% acrílico, hipoalergénico. El mayor goleador de la historia.", rating: 5
+    },
+    {
+        id: 94, name: "Caja personalizada con flor", price: 30.00, category: ["personalizados"],
+        image: "fotos productos/macetaniña.jpg",
+        images: ["fotos productos/macetaniña.jpg"],
+        description: "Incluye un amigurumi de 11cm, una maceta con la flor de tu preferencia de 16cm y luces LED. Material: 100% acrílico, hipoalergénico. El mayor goleador de la historia.", rating: 5
+    },
+    {
+        id: 95, name: "Caja personalizada con flor", price: 30.00, category: ["personalizados"],
+        image: "fotos productos/cajaflor1.jpg",
+        images: ["fotos productos/cajaflor1.jpg", "fotos productos/cajaflor2.jpg",],
+        description: "Incluye un amigurumi de 11cm, una maceta con la flor de tu preferencia de 16cm y luces LED. Material: 100% acrílico, hipoalergénico. El mayor goleador de la historia.", rating: 5
     },
     {
         id: 8, name: "Llavero de Batman", price: 8.00, category: ["personajes", "llaveros"],
         image: "fotos productos/batman.jpeg",
         images: ["fotos productos/batman.jpeg", "fotos productos/batman2.jpeg",],
         description: "Medida: 7cm 🦇 Material: 100% acrílico, hipoalergénico.", rating: 5
-    },
-    {
-        id: 9, name: "Llavero de Alegría", price: 10.00, category: ["personajes", "llaveros"],
-        image: "fotos productos/alegria.jpeg",
-        images: ["fotos productos/alegria.jpeg",],
-        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.", rating: 5
-    },
-    {
-        id: 10, name: "Llavero de Furia", price: 8.00, category: ["personajes", "llaveros"],
-        image: "fotos productos/furia.jpeg",
-        images: ["fotos productos/furia.jpeg",],
-        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.", rating: 5
     },
     {
         id: 32, name: "Shrek", price: 15.00, category: ["personajes"],
@@ -181,6 +289,36 @@ const products = [
         images: ["fotos productos/spiderman.jpg"],
         description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
+    {
+        id: 70, name: "Llavero de Virgencita", price: 8.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/virgen.jpg",
+        images: ["fotos productos/virgen.jpg"],
+        description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 73, name: "Llavero de Mini Maceta", price: 10.00, category: ["llaveros"],
+        image: "fotos productos/minimaceta.jpg",
+        images: ["fotos productos/minimaceta.jpg"],
+        description: "Medida: 14cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 79, name: "Llavero de Mini Ramo", price: 8.00, category: ["llaveros"],
+        image: "fotos productos/miniramo.jpg",
+        images: ["fotos productos/miniramo.jpg"],
+        description: "Medida: 7.5cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 9, name: "Llavero de Alegría", price: 10.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/alegria.jpeg",
+        images: ["fotos productos/alegria.jpeg",],
+        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.", rating: 5
+    },
+    {
+        id: 10, name: "Llavero de Furia", price: 8.00, category: ["personajes", "llaveros"],
+        image: "fotos productos/furia.jpeg",
+        images: ["fotos productos/furia.jpeg",],
+        description: "Medida: 7cm. Material: 100% acrílico, hipoalergénico.", rating: 5
+    },
 
     // === LLAVEROS ===
     {
@@ -218,6 +356,12 @@ const products = [
         image: "fotos productos/minion1.jpeg",
         images: ["fotos productos/minion1.jpeg",],
         description: "Medida: 5cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 18, name: "Ariana grande, era Positions", price: 22.00, category: ["personajes"],
+        image: "fotos productos/ariana grande.jpeg",
+        images: ["fotos productos/ariana grande.jpeg",],
+        description: "Medida: 18cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 19, name: "Pareja de Capibaras", price: 10.00, category: "llaveros",
@@ -339,6 +483,12 @@ const products = [
         images: ["fotos productos/saquito.jpg", "fotos productos/saquito2.jpg"],
         description: "Guarda tus audífonos, dinero y accesorios en nuestras funditas. Perfectas para colgar en tus bolsos. Material: 100% Acrílico, hipoalergénico🧶.", rating: 5
     },
+    {
+        id: 82, name: "Colección día de la madre", price: 7.00, category: ["llaveros"],
+        image: "fotos productos/coleccionmama.jpg",
+        images: ["fotos productos/coleccionmama.jpg"],
+        description: "Celebra el Día de la Madre con un detalle único y especial, tenemos variedad de llaveros, flores y macetas tejidas a mano. Material: 100% Acrílico, hipoalergénico🧶.", rating: 5
+    },
 
 
     // === PELUCHES ===
@@ -380,10 +530,34 @@ const products = [
         description: "Medida: 20cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 60, name: "Llavero mascota- Gato", price: 10.00, category: ["personalizados", "llaveros"],
+        id: 60, name: "Llavero mascota - Gato", price: 10.00, category: ["personalizados", "llaveros"],
         image: "fotos productos/gatoazul.jpg",
         images: ["fotos productos/gatoazul.jpg", "fotos productos/gatoazul2.jpg"],
         description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 88, name: "Llavero mascota - Gato", price: 10.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos/gatocolor.jpg",
+        images: ["fotos productos/gatocolor.jpg"],
+        description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 89, name: "Llavero de pingüino con girasol", price: 5.00, category: ["llaveros"],
+        image: "fotos productos/girapingui.jpg",
+        images: ["fotos productos/girapingui.jpg"],
+        description: "Medida: 4cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 90, name: "Llavero de capibara girasol", price: 7.00, category: ["llaveros"],
+        image: "fotos productos/giracapibara.jpg",
+        images: ["fotos productos/giracapibara.jpg"],
+        description: "Medida: 6cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 91, name: "Llaveros pareja Cars", price: 12.00, category: ["llaveros", "personajes"],
+        image: "fotos productos/carsito.jpg",
+        images: ["fotos productos/carsito.jpg"],
+        description: "Medida: 6cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 48, name: "Peluche de oso", price: 30.00, category: "peluches",

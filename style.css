@@ -737,8 +737,8 @@ header {
 }
 
 .image-gallery img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   /* Bordes redondeados sutiles */
@@ -1221,8 +1221,8 @@ footer {
   }
 
   .image-gallery img {
-    width: 200px !important;
-    height: 200px !important;
+    width: 250px !important;
+    height: 250px !important;
   }
 
   .logo-text {
