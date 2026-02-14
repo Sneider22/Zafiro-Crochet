@@ -472,7 +472,7 @@ function showSearchSuggestions(query) {
   // Buscar productos que coincidan
   const matches = state.products.filter(p =>
     p.name.toLowerCase().includes(query.toLowerCase())
-  ).slice(0, 3); // Solo las primeras 3
+  ); // .slice(0, 3) REMOVED to show all suggestions with scroll
 
   if (matches.length === 0) {
     searchSuggestions.classList.remove('active');
