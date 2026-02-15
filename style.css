@@ -346,6 +346,8 @@ header {
   box-shadow: var(--shadow);
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -390,6 +392,9 @@ header {
 .card-content {
   padding: 0.8rem;
   /* Reducido de 1.5rem */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-category {
@@ -437,6 +442,7 @@ header {
   align-items: center;
   gap: 0.5rem;
   margin: 1rem 0;
+  margin-top: auto;
 }
 
 .price {
@@ -1345,3 +1351,41 @@ footer {
   min-width: 15px;
   text-align: center;
 }
+/* === WHATSAPP FAB === */
+.fab-whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-dark);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+  z-index: 1000;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.fab-whatsapp:hover {
+  transform: scale(1.1) rotate(10deg);
+  background: var(--primary);
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+  color: white;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+  .fab-whatsapp {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+}
+

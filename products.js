@@ -42,16 +42,22 @@ const products = [
         description: "Medida: 18cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 68, name: "Ramo doctora personalizado ", price: 54.00, category: ["ramos"],
+        id: 68, name: "Ramo doctora personalizado", price: 54.00, category: ["ramos"],
         image: "fotos productos/ramodoc.jpg",
         images: ["fotos productos/ramodoc.jpg"],
         description: "Este ramo contiene dos gerberas, 4 tulipanes y una doctora de 18cm. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 69, name: "Pareja de pinguinos ", price: 28.00, category: ["personalizados"],
+        id: 69, name: "Pareja de pinguinos", price: 28.00, category: ["personalizados"],
         image: "fotos productos/pingui1.jpg",
         images: ["fotos productos/pingui1.jpg", "fotos productos/pingui2.jpg"],
         description: "Medida: 10cm aprox. Material: 100% Acrílico,  hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 142, name: "Ramo mini Snoopy", price: 25.00, category: ["snoopy", "ramos"],
+        image: "fotos productos2/mini.jpg",
+        images: ["fotos productos2/mini.jpg"],
+        description: " Este Ramo incluye: 1 mini Snoopy, 1 rosa, 1 girasol, 2 tulipanes. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 92, name: "Peluche de BbokAri - Stray Kids", price: 25.00, category: ["personajes", "peluches"],
@@ -218,7 +224,7 @@ const products = [
         description: "Incluye un amigurumi de 11cm, una maceta con la flor de tu preferencia de 16cm y luces LED. Material: 100% acrílico, hipoalergénico. El mayor goleador de la historia.", rating: 5
     },
     {
-        id: 95, name: "Caja personalizada con flor", price: 30.00, category: ["personalizados"],
+        id: 95, name: "Caja personalizada con flor", price: 20.00, category: ["personalizados"],
         image: "fotos productos/cajaflor1.jpg",
         images: ["fotos productos/cajaflor1.jpg", "fotos productos/cajaflor2.jpg",],
         description: "Incluye un amigurumi de 11cm, una maceta con la flor de tu preferencia de 16cm y luces LED. Material: 100% acrílico, hipoalergénico. El mayor goleador de la historia.", rating: 5
@@ -278,7 +284,7 @@ const products = [
         description: "Ideales para colgar en tu bolso o tote bag, escoge los colores que más te gusten y personalizalos a tu estilo. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 105, name: "Ramo Snoopy y margaritas", price: 35.00, category: ["ramos", "Snoopy"],
+        id: 105, name: "Ramo Snoopy y margaritas", price: 35.00, category: ["ramos", "snoopy"],
         image: "fotos productos2/marga.jpg",
         images: ["fotos productos2/marga.jpg",],
         description: "Este ramo incluye : 1 Snoopy Aviador, 6 margaritas. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
@@ -326,7 +332,7 @@ const products = [
         description: "Medida: 10cm aprox.  Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 114, name: "Snoopy con Ramo de rosas", price: 40.00, category: ["Snoopy", "Ramo"],
+        id: 114, name: "Snoopy con Ramo de rosas", price: 40.00, category: ["snoopy", "ramos"],
         image: "fotos productos2/snoo.jpg",
         images: ["fotos productos2/snoo.jpg",],
         description: "Snoopy: 27cm de alto: 25$, Ramo de 3 rosas: 15$ Material: 100% Acrílico, hipoalergénico🧶", rating: 5

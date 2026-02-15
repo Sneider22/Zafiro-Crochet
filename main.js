@@ -7,7 +7,6 @@ let state = {
   currentPage: 1,
   itemsPerPage: 6,
   extras: {
-    giftBag: 0,
     giftBox: 0
   }
 };
@@ -414,21 +413,7 @@ function renderCartExtras() {
   if (!container) return;
 
   container.innerHTML = `
-    <h4 class="extras-title">¿Deseas añadir bolsa o caja de regalo?</h4>
-    <div class="extra-item">
-      <div class="extra-main">
-        <img src="bolsa.jpeg" alt="Bolsa de regalo" class="extra-img">
-        <div class="extra-info">
-          <span class="extra-name">Bolsa de regalo</span>
-          <span class="extra-price">+$2.00</span>
-        </div>
-      </div>
-      <div class="extra-controls">
-        <button onclick="changeExtra('giftBag', -1)">-</button>
-        <span class="extra-qty">${state.extras.giftBag}</span>
-        <button onclick="changeExtra('giftBag', 1)">+</button>
-      </div>
-    </div>
+    <h4 class="extras-title">¿Deseas añadir una caja de regalo?</h4>
     <div class="extra-item">
       <div class="extra-main">
         <img src="caja.jpeg" alt="Caja de regalo" class="extra-img">
@@ -456,7 +441,6 @@ function changeExtra(type, delta) {
 
 function updateCartTotalWithExtras() {
   let total = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  total += state.extras.giftBag * 2;
   total += state.extras.giftBox * 3;
   cartTotalElement.innerText = `$${total.toFixed(2)}`;
 }
@@ -526,11 +510,6 @@ function checkoutWhatsApp() {
   });
 
   // Añadir Extras
-  if (state.extras.giftBag > 0) {
-    const cost = state.extras.giftBag * 2;
-    total += cost;
-    message += `🛍️ Bolsa de regalo (x${state.extras.giftBag}) - $${cost.toFixed(2)}\n`;
-  }
   if (state.extras.giftBox > 0) {
     const cost = state.extras.giftBox * 3;
     total += cost;
