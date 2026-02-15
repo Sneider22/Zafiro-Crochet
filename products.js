@@ -48,7 +48,7 @@ const products = [
         description: "Este ramo contiene dos gerberas, 4 tulipanes y una doctora de 18cm. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 69, name: "Pareja de pingüinos ", price: 28.00, category: ["personalizados"],
+        id: 69, name: "Pareja de pinguinos ", price: 28.00, category: ["personalizados"],
         image: "fotos productos/pingui1.jpg",
         images: ["fotos productos/pingui1.jpg", "fotos productos/pingui2.jpg"],
         description: "Medida: 10cm aprox. Material: 100% Acrílico,  hipoalergénico🧶", rating: 5
@@ -126,10 +126,10 @@ const products = [
         description: " Este ramo incluye: 1 pollito de 8cm , 3 mini girasoles, 4 mini margaritas, 3 mini corazones. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 86, name: "Ramo Pollito Girasol", price: 30.00, category: ["ramos"],
-        image: "fotos productos/pollito.jpg",
-        images: ["fotos productos/pollito.jpg",],
-        description: " Este ramo incluye: 1 pollito de 8cm , 3 mini girasoles, 4 mini margaritas, 3 mini corazones. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+        id: 86, name: "Billie Eilish", price: 25.00, category: ["personalizados"],
+        image: "fotos productos2/billie.jpg",
+        images: ["fotos productos2/billie.jpg",],
+        description: " Medida: 18cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 87, name: "Llavero de cactus", price: 8.00, category: ["llaveros"],
@@ -222,6 +222,278 @@ const products = [
         image: "fotos productos/cajaflor1.jpg",
         images: ["fotos productos/cajaflor1.jpg", "fotos productos/cajaflor2.jpg",],
         description: "Incluye un amigurumi de 11cm, una maceta con la flor de tu preferencia de 16cm y luces LED. Material: 100% acrílico, hipoalergénico. El mayor goleador de la historia.", rating: 5
+    },
+    {
+        id: 96, name: "Stephen Curry Amigurumi", price: 22.00, category: ["personajes"],
+        image: "fotos productos2/curry.jpg",
+        images: ["fotos productos2/curry.jpg",],
+        description: "Medida: 16cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 97, name: "Colgante para el carro - Spiderman", price: 15.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/spiderman.jpg",
+        images: ["fotos productos2/spiderman.jpg"],
+        description: "La máscara es desmontable y puedes personalizarlo a tu gusto, ideal para colgar en el retrovisor. Medida: 11cm aprox. Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 98, name: "Ellie - The Last of Us", price: 22.00, category: ["personajes"],
+        image: "fotos productos2/ellie.jpg",
+        images: ["fotos productos2/ellie.jpg",],
+        description: "Medida: 16cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 99, name: "Pareja de amigurumis personalizados", price: 36.00, category: "personalizados",
+        image: "fotos productos2/pareja.jpg",
+        images: ["fotos productos2/pareja.jpg",],
+        description: "Medida: 16/18cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 100, name: "Llaveros de Chimuelo y Furia Luminosa", price: 12.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/chimuelo.jpg",
+        images: ["fotos productos2/chimuelo.jpg"],
+        description: "6$ c/u- 12$ el par. Medida: 5cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 101, name: "Young Miko", price: 25.00, category: ["personajes"],
+        image: "fotos productos2/miko.jpg",
+        images: ["fotos productos2/miko.jpg"],
+        description: "Medida: 17cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 102, name: "Llaveros de pinguinos", price: 10.00, category: ["llaveros"],
+        image: "fotos productos2/pingui.jpg",
+        images: ["fotos productos2/pingui.jpg"],
+        description: "5$ c/u- 10$ el par, con imanes 12$ el par. Medida: 5cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 103, name: "Amigurumi Personalizado", price: 22.00, category: ["personalizados"],
+        image: "fotos productos2/joven.jpg",
+        images: ["fotos productos2/joven.jpg",],
+        description: "Medida: 16cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 104, name: "Porta audífonos", price: 10.00, category: ["llaveros"],
+        image: "fotos productos2/audifonos.jpg",
+        images: ["fotos productos2/audifonos.jpg",],
+        description: "Ideales para colgar en tu bolso o tote bag, escoge los colores que más te gusten y personalizalos a tu estilo. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 105, name: "Ramo Snoopy y margaritas", price: 35.00, category: ["ramos", "Snoopy"],
+        image: "fotos productos2/marga.jpg",
+        images: ["fotos productos2/marga.jpg",],
+        description: "Este ramo incluye : 1 Snoopy Aviador, 6 margaritas. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 106, name: "Llavero de rana", price: 10.00, category: ["llaveros"],
+        image: "fotos productos2/rana.jpg",
+        images: ["fotos productos2/rana.jpg",],
+        description: "Medida:8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 107, name: "Spiderman Miles Morales- colgante retrovisor", price: 10.00, category: ["llaveros"],
+        image: "fotos productos2/miles.jpg",
+        images: ["fotos productos2/miles.jpg",],
+        description: "Medida:8cm aprox. Ideal para colgar en el carro o usarlo como llavero. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 108, name: "Llavero mascota - Perro", price: 10.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos2/perroblanco.jpg",
+        images: ["fotos productos2/perroblanco.jpg",],
+        description: "Medida: 8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 109, name: "Ramo personalizado ", price: 55.00, category: ["personalizados", "ramos"],
+        image: "fotos productos2/ramoperro.jpg",
+        images: ["fotos productos2/ramoperro.jpg",],
+        description: "Este ramo incluye: 2 personalizados de 18cm, una mascota de 8cm y 4 margaritas. Recuerda que puedes personalizar a tu gusto y variar la cantidad y tipo de flores. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 110, name: "Flor de Rapunzel ", price: 25.00, category: ["ramos"],
+        image: "fotos productos2/rapunzel.jpg",
+        images: ["fotos productos2/rapunzel.jpg",],
+        description: "Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 111, name: "Hermione - Harry Potter ", price: 25.00, category: ["personajes"],
+        image: "fotos productos2/hermione.jpg",
+        images: ["fotos productos2/hermione.jpg",],
+        description: "Medida: 20cm aprox.  Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 112, name: "Llavero de Rosita Fresita", price: 13.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/rosita.jpg",
+        images: ["fotos productos2/rosita.jpg",],
+        description: "Medida: 10cm aprox.  Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 114, name: "Snoopy con Ramo de rosas", price: 40.00, category: ["Snoopy", "Ramo"],
+        image: "fotos productos2/snoo.jpg",
+        images: ["fotos productos2/snoo.jpg",],
+        description: "Snoopy: 27cm de alto: 25$, Ramo de 3 rosas: 15$ Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 115, name: "Amigurumis personalizadas", price: 26.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos2/amigas.jpg",
+        images: ["fotos productos2/amigas.jpg",],
+        description: "Amigurumis personalizadas de 11cm aprox. Tipo llavero 13$ c/u. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 116, name: "Llavero mascota - Perro y Gato", price: 10.00, category: ["personalizados", "llavero"],
+        image: "fotos productos2/perroygato.jpg",
+        images: ["fotos productos2/perroygato.jpg",],
+        description: "Medida: 8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 117, name: "Pareja de amigurumis personalizados", price: 36.00, category: ["personalizados"],
+        image: "fotos productos2/parejaazul.jpg",
+        images: ["fotos productos2/parejaazul.jpg",],
+        description: "Medida: 18cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 118, name: "Doctor José Gregorio", price: 25.00, category: ["personajes"],
+        image: "fotos productos2/jose.jpg",
+        images: ["fotos productos2/jose.jpg",],
+        description: "Medida: 18cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 119, name: "Llavero de Doctor José Gregorio", price: 13.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/joseg.jpg",
+        images: ["fotos productos2/joseg.jpg",],
+        description: "Medida: 11cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 120, name: "Ramo Hollow Knight", price: 30.00, category: ["personajes", "ramos"],
+        image: "fotos productos2/hollow.jpg",
+        images: ["fotos productos2/hollow.jpg",],
+        description: "Este Ramo incluye: 3 tulipanes y 1 hollow Knight de 13cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+
+    {
+        id: 121, name: "Llavero mascota - Perro", price: 10.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos2/perrobigotin.jpg",
+        images: ["fotos productos2/perrobigotin.jpg",],
+        description: "Medida: 8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+
+    {
+        id: 122, name: "Chuyin - Fuerza Regida ", price: 22.00, category: ["personajes"],
+        image: "fotos productos2/chuyin.jpg",
+        images: ["fotos productos2/chuyin.jpg",],
+        description: "Medida: 16cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 123, name: "Peluche de Snoopy navideño ", price: 30.00, category: ["snoopy", "peluches"],
+        image: "fotos productos2/snoonavidad.jpg",
+        images: ["fotos productos2/snoonavidad.jpg",],
+        description: "Medida: 27cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 124, name: "Personajes Harry Potter - Harry, Ron y Hermione", price: 60.00, category: ["personajes"],
+        image: "fotos productos2/harry.jpg",
+        images: ["fotos productos2/harry.jpg",],
+        description: "Precio: 25$ c/u. 3x60$. Medida: 18cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 125, name: "Sanji - One piece", price: 15.00, category: ["personajes"],
+        image: "fotos productos2/sanji.jpg",
+        images: ["fotos productos2/sanji.jpg",],
+        description: "Medida: 13cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 126, name: "Llavero minion", price: 5.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/minion.jpg",
+        images: ["fotos productos2/minion.jpg",],
+        description: "Medida: 5cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 127, name: "Llavero mascota - Loro", price: 8.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos2/loro.jpg",
+        images: ["fotos productos2/loro.jpg",],
+        description: "Medida: 7cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 128, name: "Ramo personalizado", price: 28.00, category: ["personalizados", "ramos"],
+        image: "fotos productos2/niño.jpg",
+        images: ["fotos productos2/niño.jpg",],
+        description: "Este ramo incluye 1 personalizado de 18cm y 2 tulipanes. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 129, name: "Combo llaveros Demon Slayer", price: 35.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/demon.jpg",
+        images: ["fotos productos2/demon.jpg",],
+        description: "Precio: 13$ cada uno. 3x35$ Medida: 11cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 130, name: "Billie Eilish", price: 25.00, category: ["personalizados"],
+        image: "fotos productos2/billie2.jpg",
+        images: ["fotos productos2/billie2.jpg",],
+        description: "Medida: 18cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 131, name: "Peluche de Elefante", price: 35.00, category: ["peluche"],
+        image: "fotos productos2/elefante.jpg",
+        images: ["fotos productos2/elefante.jpg",],
+        description: "Medida: 27cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 132, name: "Llaveros de pareja personalizados", price: 26.00, category: ["personalizados", "llaveros"],
+        image: "fotos productos2/barinas.jpg",
+        images: ["fotos productos2/barinas.jpg",],
+        description: "Precio: 13$ c/u. Medida: 13cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 133, name: "Ed Maverick", price: 25.00, category: ["personajes"],
+        image: "fotos productos2/ed.jpg",
+        images: ["fotos productos2/ed.jpg",],
+        description: "Medida: 16cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 134, name: "Llavero de oso", price: 8.00, category: ["llaveros"],
+        image: "fotos productos2/oso.jpg",
+        images: ["fotos productos2/oso.jpg",],
+        description: "Medida: 7cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 135, name: "Amigurumi personalizado", price: 20.00, category: ["personalizados"],
+        image: "fotos productos2/tipo.jpg",
+        images: ["fotos productos2/tipo.jpg",],
+        description: "Medida: 16cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 136, name: "Peluche Lambie", price: 30.00, category: ["peluches"],
+        image: "fotos productos2/lambie.jpg",
+        images: ["fotos productos2/lambie.jpg",],
+        description: "Medida: 30cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 137, name: "Señor Papa - Peppa Pig", price: 13.00, category: ["personajes"],
+        image: "fotos productos2/papa.jpg",
+        images: ["fotos productos2/papa.jpg",],
+        description: "Medida: 13cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 138, name: "Peppa pig", price: 10.00, category: ["personajes"],
+        image: "fotos productos2/peppa.jpg",
+        images: ["fotos productos2/peppa.jpg",],
+        description: "Medida: 8cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 139, name: "Llavero Shinobu - Demon Slayer", price: 13.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/shinobu.jpg",
+        images: ["fotos productos2/shinobu.jpg",],
+        description: "Llavero Shinobu - Pilar Insecto. Medida: 11cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 140, name: "Llavero Giyu Tomioka - Demon Slayer", price: 13.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/giyu.jpg",
+        images: ["fotos productos2/giyu.jpg",],
+        description: "Llavero Giyu Tomioka - Pilar agua. Medida: 11cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
+    },
+    {
+        id: 141, name: "Llavero Tengen Uzui - Demon Slayer", price: 13.00, category: ["personajes", "llaveros"],
+        image: "fotos productos2/tengen.jpg",
+        images: ["fotos productos2/tengen.jpg",],
+        description: "Llavero Tengen Uzui - Pilar sonido. Medida: 11cm aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
         id: 8, name: "Llavero de Batman", price: 8.00, category: ["personajes", "llaveros"],
@@ -542,7 +814,7 @@ const products = [
         description: "Medida: 8cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
     },
     {
-        id: 89, name: "Llavero de pingüino con girasol", price: 5.00, category: ["llaveros"],
+        id: 89, name: "Llavero de pinguino con girasol", price: 5.00, category: ["llaveros"],
         image: "fotos productos/girapingui.jpg",
         images: ["fotos productos/girapingui.jpg"],
         description: "Medida: 4cm Aprox. Material: 100% Acrílico, hipoalergénico🧶", rating: 5
