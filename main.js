@@ -79,7 +79,11 @@ function renderApp() {
         matchesCategory = p.category === state.filter;
       }
     }
-    const matchesSearch = p.name.toLowerCase().includes(state.search.toLowerCase());
+    const searchWords = state.search.toLowerCase().split(' ').filter(word => word.length > 0);
+    const matchesSearch = searchWords.every(word =>
+      p.name.toLowerCase().includes(word) ||
+      (Array.isArray(p.category) ? p.category.some(cat => cat.toLowerCase().includes(word)) : p.category.toLowerCase().includes(word))
+    );
     return matchesCategory && matchesSearch;
   });
 
@@ -453,10 +457,14 @@ function showSearchSuggestions(query) {
     return;
   }
 
-  // Buscar productos que coincidan
-  const matches = state.products.filter(p =>
-    p.name.toLowerCase().includes(query.toLowerCase())
-  ); // .slice(0, 3) REMOVED to show all suggestions with scroll
+  // Buscar productos que coincidan por palabras clave
+  const queryWords = query.toLowerCase().split(' ').filter(word => word.length > 0);
+  const matches = state.products.filter(p => {
+    return queryWords.every(word =>
+      p.name.toLowerCase().includes(word) ||
+      (Array.isArray(p.category) ? p.category.some(cat => cat.toLowerCase().includes(word)) : p.category.toLowerCase().includes(word))
+    );
+  });
 
   if (matches.length === 0) {
     searchSuggestions.classList.remove('active');

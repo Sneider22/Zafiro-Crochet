@@ -9,11 +9,12 @@ Este proyecto es una tienda online ligera diseñada para presentar productos hec
 ## ✅ Funcionalidades principales 
 
 - Visualización de catálogo de productos con paginación (`index.html`, `products.js`, `main.js`).
-- Filtros por categoría y búsqueda con sugerencias en tiempo real.
+- Filtros por categoría y búsqueda flexible por palabras clave (keywords).
 - Modal de detalle de producto con galería de imágenes, descripción y selección de cantidad.
 - Carrito de compras con persistencia (guarda los ítems y cantidades) 🛒.
-- Opciones extras en el carrito: añadir bolsa o caja de regalo y recalcular el total 🎁.
-- Generación automática de mensaje de pedido y envío por WhatsApp con el resumen del carrito 📲.
+- Opción extra en el carrito: añadir caja de regalo de $3 y recalcular el total 🎁.
+- Botón flotante (FAB) de WhatsApp con saludo dinámico según la hora del día 📲.
+- Generación de mensaje de pedido con saludos personalizados (buenos días/tardes/noches).
 - Panel de administración simple (modal) con lista de pendientes (to‑do) guardada en `localStorage` ⚙️.
 - Diseño responsive y UI moderna con estilos 
 
@@ -27,11 +28,11 @@ Este proyecto es una tienda online ligera diseñada para presentar productos hec
 
 ## Cómo funciona (resumen técnico)
 
-1. Al abrir la página, `main.js` carga los productos definidos en `products.js` y renderiza el grid.
-2. El usuario puede filtrar por categoría o usar la búsqueda; la interfaz muestra sugerencias y actualiza el resultado al instante.
-3. Haciendo clic en un producto se abre un modal con detalles, galería y control de cantidad.
-4. Al añadir al carrito, los productos se guardan en `localStorage`; el contador del carrito se actualiza.
-5. En el modal del carrito se pueden añadir extras (bolsa/caja), ver el total y enviar el pedido por WhatsApp con un mensaje preformateado.
+1. Al abrir la página, `main.js` carga los productos de `products.js` y sincroniza el carrito.
+2. El usuario puede filtrar por categorías o usar el buscador inteligente (acepta múltiples palabras clave en cualquier orden).
+3. Haciendo clic en un producto se accede al detalle: galería, descripción y selector de cantidad.
+4. Al añadir al carrito, los datos persisten en `localStorage`.
+5. En el carrito, se puede sumar una caja de regalo ($3), ver el total y enviar el pedido por WhatsApp con un saludo automático ajustable a la hora.
 
 ## 🎨 Personalización rápida
 
