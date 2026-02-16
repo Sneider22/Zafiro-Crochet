@@ -1351,6 +1351,7 @@ footer {
   min-width: 15px;
   text-align: center;
 }
+
 /* === WHATSAPP FAB === */
 .fab-whatsapp {
   position: fixed;
@@ -1388,4 +1389,3 @@ footer {
     font-size: 1.8rem;
   }
 }
-

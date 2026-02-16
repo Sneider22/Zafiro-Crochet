@@ -499,7 +499,8 @@ function checkoutWhatsApp() {
   if (state.cart.length === 0) return alert("Agrega productos primero :)");
 
   const phoneNumber = "584142826330";
-  let message = "Hola! 👋 Quiero realizar el siguiente pedido:\n\n";
+  const greeting = getGreeting();
+  let message = `${greeting}, quiero realizar el siguiente pedido:\n\n`;
   let total = 0;
 
   state.cart.forEach(item => {
@@ -598,10 +599,13 @@ function setupEventListeners() {
   });
 
   // Admin Login Logic
-  document.getElementById('adminBtn').addEventListener('click', () => {
-    document.getElementById('loginModal').classList.add('active');
-    history.pushState({ modal: 'login' }, '');
-  });
+  const adminBtn = document.getElementById('adminBtn');
+  if (adminBtn) {
+    adminBtn.addEventListener('click', () => {
+      document.getElementById('loginModal').classList.add('active');
+      history.pushState({ modal: 'login' }, '');
+    });
+  }
 
   // === TO-DO LIST ADMIN ===
   let todos = JSON.parse(localStorage.getItem('adminTodos')) || [];
@@ -645,20 +649,23 @@ function setupEventListeners() {
     localStorage.setItem('adminTodos', JSON.stringify(todos));
   }
 
-  document.getElementById('loginForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const user = document.getElementById('usernameInput').value;
-    const pass = document.getElementById('passwordInput').value;
+  const loginForm = document.getElementById('loginForm');
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = document.getElementById('usernameInput').value;
+      const pass = document.getElementById('passwordInput').value;
 
-    if (user === 'sofiavsh' && pass === 'pato123') {
-      closeLogin();
-      document.getElementById('adminPanelModal').classList.add('active');
-      renderTodos();
-      history.pushState({ modal: 'admin' }, '');
-    } else {
-      alert("Credenciales incorrectas");
-    }
-  });
+      if (user === 'sofiavsh' && pass === 'pato123') {
+        closeLogin();
+        document.getElementById('adminPanelModal').classList.add('active');
+        renderTodos();
+        history.pushState({ modal: 'admin' }, '');
+      } else {
+        alert("Credenciales incorrectas");
+      }
+    });
+  }
 }
 
 function closeLogin() {
@@ -670,7 +677,8 @@ function sendSuggestion() {
   if (!input.trim()) return alert("Por favor escribe algo :)");
 
   const phoneNumber = "584142826330";
-  const message = `Hola! 👋 Estoy interesad@ en un amigurumi personalizado de:\n\n✨ ${input}\n`;
+  const greeting = getGreeting();
+  const message = `${greeting}, estoy interesad@ en un amigurumi personalizado de:\n\n✨ ${input}\n`;
 
   const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
@@ -683,28 +691,38 @@ function closeAdminPanel() {
   document.getElementById('adminPanelModal').classList.remove('active');
 }
 
+// Función auxiliar para obtener el saludo según la hora
+function getGreeting() {
+  const now = new Date();
+  const hour = now.getHours();
+
+  if (hour >= 6 && hour < 12) {
+    return "Buenos días";
+  } else if (hour >= 12 && hour < 18) {
+    return "Buenas tardes";
+  } else {
+    return "Buenas noches";
+  }
+}
+
 // Función para el WhatsApp FAB con mensaje dinámico
 function setupWhatsAppFAB() {
   const fab = document.getElementById('whatsappFAB');
   if (!fab) return;
 
   const phoneNumber = "584142826330";
-  const now = new Date();
-  const hour = now.getHours();
-  let greeting = "";
-
-  if (hour >= 6 && hour < 12) {
-    greeting = "Buenos días";
-  } else if (hour >= 12 && hour < 18) {
-    greeting = "Buenas tardes";
-  } else {
-    greeting = "Buenas noches";
-  }
+  const greeting = getGreeting();
 
   const message = `${greeting}, quisiera hacer un pedido de crochet 🧶`;
   const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
-  fab.href = url;
+  if (fab) {
+    fab.href = url;
+    // Opcional: listener por si el href no es suficiente o hay bloqueos
+    fab.addEventListener('click', (e) => {
+      console.log("WhatsApp FAB clicked, opening:", url);
+    });
+  }
 }
 
 // Iniciar app
