@@ -683,5 +683,30 @@ function closeAdminPanel() {
   document.getElementById('adminPanelModal').classList.remove('active');
 }
 
+// Función para el WhatsApp FAB con mensaje dinámico
+function setupWhatsAppFAB() {
+  const fab = document.getElementById('whatsappFAB');
+  if (!fab) return;
+
+  const phoneNumber = "584142826330";
+  const now = new Date();
+  const hour = now.getHours();
+  let greeting = "";
+
+  if (hour >= 6 && hour < 12) {
+    greeting = "Buenos días";
+  } else if (hour >= 12 && hour < 18) {
+    greeting = "Buenas tardes";
+  } else {
+    greeting = "Buenas noches";
+  }
+
+  const message = `${greeting}, quisiera hacer un pedido de crochet 🧶`;
+  const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+  fab.href = url;
+}
+
 // Iniciar app
 init();
+setupWhatsAppFAB();
