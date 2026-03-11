@@ -48,9 +48,5 @@ Este proyecto es una tienda online ligera diseñada para presentar productos hec
 - Mejoras de accesibilidad (atributos ARIA, foco en modales, roles semánticos).
 - Integración con servicios de envío y cálculo de costos en tiempo real.
 
-## 📄 Contacto
 
-Para dudas o soporte, editar los archivos del proyecto directamente o contacta al autor del repositorio.
-
----
 
